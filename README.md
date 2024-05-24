@@ -1,40 +1,44 @@
-# Maa Gakumas Producer Assistant
+<div align="center">
+  
+# 初星助教 MaaHatsuboshiTA
 
-适用于手游 学院偶像大师 的 **学园P小助手**
+为**学院偶像大师**的制作人们设计的自动化工具
+
 图像技术 + 模拟控制，解放双手！
+
 由 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 强力驱动！
+
+</div>
 
 
 ## 功能介绍
 
-目前已有的功能：
+已经上线的功能：
 
-- 指定**支援SSR数量**的刷初始
+- 指定**支援SSR**数量的刷初始号
 
 计划支持的功能：
 
-* 指定任意种类SSR数量的刷初始
-* 指定某一特定卡的刷初始
-* 自动竞技场
+* 指定两种SSR各自数量的刷初始号
+* 指定某一特定卡的刷初始号
 
 画饼的功能：
 
+* 自动竞技场
 * 全自动P卡
 
-## 使用说明
-
-下载地址：
+## 安装说明
 
 ### Windows
 
-- 对于绝大部分用户，请下载 `MGPA-win-x86_64-vXXX.zip`
-- 若确定自己的电脑是 arm 架构，请下载 `MGPA-win-aarch64-vXXX.zip`
+- 对于绝大部分用户，请下载 `MaaHatsuboshiTA-win-x86_64-vXXX.zip`
+- 若确定自己的电脑是 arm 架构，请下载 `MaaHatsuboshiTA-win-aarch64-vXXX.zip`
 - 解压后运行 `MaaPiCli.exe` 即可
 
 ### macOS
 
-- 若使用 Intel 处理器，请下载 `MGPA-macos-x86_64-vXXX.zip`
-- 若使用 M1, M2 等 arm 处理器，请下载 `MGPA-macos-aarch64-vXXX.zip`
+- 若使用 Intel 处理器，请下载 `MaaHatsuboshiTA-macos-x86_64-vXXX.zip`
+- 若使用 M1, M2 等 arm 处理器，请下载 `MaaHatsuboshiTA-macos-aarch64-vXXX.zip`
 - 使用方式：
   
   ```bash
@@ -45,6 +49,17 @@
 ### Linux
 
 ~~用 Linux 的大佬应该不需要我教~~
+
+## 使用说明
+
+在启动脚本前完成以下工作：
+* 确保游戏可以在模拟器上流畅运行，没有严重的卡顿和延迟
+* 将模拟器的分辨率调整为 竖屏 900 * 1600
+* 完成所有游戏资源的下载
+* 完成强制新手教程
+* 将游戏退出至跳动“TAP TO START”字样的**标题页**
+
+按以下步骤启动：
 
 ## 加入开发
 
