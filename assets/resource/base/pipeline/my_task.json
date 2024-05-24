@@ -1,5 +1,345 @@
 {
-    "MyTask1": {},
-    "MyTask2": {},
-    "MyTask3": {}
+    "Clear_Data_And_Start": {
+        "recognition": "TemplateMatch",
+        "template": "icon_menu.png",
+        "action": "Click",
+        "next": [
+            "Enter_Clear_Data"
+        ]
+    },
+    "Enter_Clear_Data": {
+        "recognition": "TemplateMatch",
+        "template": "icon_start_clear_data.png",
+        "action": "Click",
+        "next": [
+            "Click_Clear_Data"
+        ]
+    },
+    "Click_Clear_Data": {
+        "recognition": "TemplateMatch",
+        "template": "icon_clear_data_OK.png",
+        "action": "Click",
+        "timeout": 500000,
+        "next": [
+            "Close_Menu"
+        ]
+    },
+    "Close_Menu": {
+        "recognition": "TemplateMatch",
+        "template": "icon_close_menu.png",
+        "action": "Click",
+        "post_delay": 500,
+        "timeout": 500000,
+        "next": [
+            "Start_Game"
+        ]
+    },
+    "Start_Game": {
+        "recognition": "TemplateMatch",
+        "template": "logo_bandai.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "timeout": 500000,
+        "next": [
+            "Agree_Agreement_1"
+        ]
+    },
+    "Agree_Agreement_1": {
+        "recognition": "TemplateMatch",
+        "template": "icon_agree_agreement_1.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "timeout": 500000,
+        "next": [
+            "Agree_Agreement_2"
+        ]
+    },
+    "Agree_Agreement_2": {
+        "recognition": "TemplateMatch",
+        "template": "icon_agree_agreement_2.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "timeout": 500000,
+        "next": [
+            "Skip_Guidance"
+        ]
+    },
+    "Skip_Guidance": {
+        "recognition": "TemplateMatch",
+        "template": "icon_skip_guidance.png",
+        "action": "Click",
+        "post_delay": 500,
+        "timeout": 500000,
+        "next": [
+            "Name_Producer"
+        ]
+    },
+    "Name_Producer": {
+        "recognition": "TemplateMatch",
+        "template": "icon_name_ok.png",
+        "action": "Click",
+        "post_delay": 500,
+        "timeout": 500000,
+        "next": [
+            "Check_Name"
+        ]
+    },
+    "Check_Name": {
+        "recognition": "TemplateMatch",
+        "template": "icon_name_check.png",
+        "roi": [
+            341,
+            1071,
+            320,
+            170
+        ],
+        "action": "Click",
+        "timeout": 500000,
+        "next": [
+            "Go_To_Main"
+        ]
+    },
+    "Go_To_Main": {
+        "next": [
+            "Flag_In_Main",
+            "Click_Close_News",
+            "Close_Others"
+        ]
+    },
+    "Click_Close_News": {
+        "recognition": "TemplateMatch",
+        "template": "icon_close_news.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "is_sub": true
+    },
+    "Close_Others": {
+        "action": "Click",
+        "is_sub": true
+    },
+    "Flag_In_Main": {
+        "recognition": "TemplateMatch",
+        "template": "icon_home.png",
+        "next": [
+            "open_gift"
+        ]
+    },
+    "open_gift": {
+        "recognition": "TemplateMatch",
+        "template": "icon_gift.png",
+        "action": "Click",
+        "next": [
+            "get_all_gift"
+        ]
+    },
+    "get_all_gift": {
+        "recognition": "TemplateMatch",
+        "template": "icon_get_all_gift.png",
+        "action": "Click",
+        "next": [
+            "close_gift_info"
+        ]
+    },
+    "close_gift_info": {
+        "recognition": "TemplateMatch",
+        "template": "icon_close_gift_info.png",
+        "action": "Click",
+        "next": [
+            "Back_To_Main"
+        ]
+    },
+    "Back_To_Main": {
+        "recognition": "TemplateMatch",
+        "template": "icon_back_to_main.png",
+        "action": "Click",
+        "next": [
+            "Go_To_Gacha"
+        ]
+    },
+    "Go_To_Gacha": {
+        "recognition": "TemplateMatch",
+        "template": "icon_gacha.png",
+        "action": "Click",
+        "next": [
+            "Gacha_1"
+        ]
+    },
+    "Gacha_1": {
+        "recognition": "TemplateMatch",
+        "template": "icon_gacha_with_diamonds.png",
+        "action": "Click",
+        "next": [
+            "Gacha_With_Diamonds_Confirm"
+        ]
+    },
+    "Gacha_With_Diamonds_Confirm": {
+        "recognition": "TemplateMatch",
+        "template": "icon_gacha_with_diamonds_confirm.png",
+        "action": "Click",
+        "next": [
+            "End_Gacha_1"
+        ]
+    },
+    "End_Gacha_1": {
+        "next": [
+            "Leave_Gacha",
+            "Skip_Gacha"
+        ]
+    },
+    "Skip_Gacha": {
+        "is_sub": true,
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            622,
+            1199,
+            61,
+            24
+        ]
+    },
+    "Leave_Gacha": {
+        "recognition": "TemplateMatch",
+        "template": "icon_leave_gacha.png",
+        "action": "Click",
+        "next": [
+            "Change_Pool"
+        ]
+    },
+    "Change_Pool": {
+        "recognition": "TemplateMatch",
+        "template": "icon_change_pool.png",
+        "action": "Click",
+        "next": [
+            "Gacha_2"
+        ]
+    },
+    "Gacha_2": {
+        "recognition": "TemplateMatch",
+        "template": "icon_gacha_with_10_tickets.png",
+        "action": "Click",
+        "next": [
+            "Gacha_With_10_Tickets_Confirm"
+        ]
+    },
+    "Gacha_With_10_Tickets_Confirm": {
+        "recognition": "TemplateMatch",
+        "template": "icon_gacha_with_10_tickets_confirm.png",
+        "action": "Click",
+        "next": [
+            "End_Gacha_2"
+        ]
+    },
+    "End_Gacha_2": {
+        "next": [
+            "Leave_Gacha_2",
+            "Skip_Gacha"
+        ]
+    },
+    "Leave_Gacha_2": {
+        "recognition": "TemplateMatch",
+        "template": "icon_leave_gacha_2.png",
+        "action": "Click",
+        "next": [
+            "Go_To_Idol"
+        ]
+    },
+    "Go_To_Idol": {
+        "recognition": "TemplateMatch",
+        "template": "icon_idol.png",
+        "action": "Click",
+        "next": [
+            "Open_Support_Storage"
+        ]
+    },
+    "Open_Support_Storage": {
+        "recognition": "TemplateMatch",
+        "template": "icon_support_storage.png",
+        "action": "Click",
+        "next": [
+            "Check_Support_Storage"
+        ]
+    },
+    "Check_Support_Storage": {
+        "pre_delay": 500,
+        "next": [
+            "Check_SSR_5",
+            "Check_SSR_4",
+            "Check_SSR_3",
+            "Check_SSR_2",
+            "Open_Menu"
+        ]
+    },
+    "Check_SSR_5": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "bar_ssr.png",
+        "roi": [
+            251,
+            632,
+            226,
+            47
+        ],
+        "action": "Click"
+    },
+    "Check_SSR_4": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "bar_ssr.png",
+        "roi": [
+            22,
+            628,
+            232,
+            57
+        ],
+        "action": "Click"
+    },
+    "Check_SSR_3": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "bar_ssr.png",
+        "roi": [
+            467,
+            493,
+            227,
+            67
+        ],
+        "action": "Click"
+    },
+    "Check_SSR_2": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "bar_ssr.png",
+        "roi": [
+            239,
+            496,
+            240,
+            55
+        ],
+        "action": "Click"
+    },
+    "Open_Menu": {
+        "recognition": "TemplateMatch",
+        "template": "icon_menu.png",
+        "action": "Click",
+        "next": [
+            "Leave_Game"
+        ]
+    },
+    "Leave_Game": {
+        "recognition": "TemplateMatch",
+        "template": "icon_leave_game.png",
+        "action": "Click",
+        "next": [
+            "Confirm_Leave_Game"
+        ]
+    },
+    "Confirm_Leave_Game": {
+        "recognition": "TemplateMatch",
+        "template": "icon_confirm_leave_game.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "Clear_Data_And_Start"
+        ]
+    }
 }
