@@ -1,12 +1,9 @@
-<div align="center">
-
 # Maa Gakumas Producer Assistant
 
 适用于手游 学院偶像大师 的 **学园P小助手**
 图像技术 + 模拟控制，解放双手！
 由 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 强力驱动！
 
-</div>
 
 ## 功能介绍
 
@@ -53,7 +50,4 @@
 
 - 作者QQ：2839100190
 
-```
-
-```
 
