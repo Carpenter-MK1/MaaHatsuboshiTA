@@ -1,6 +1,8 @@
 <div align="center">
-  
-# 初星助教 MaaHatsuboshiTA
+
+<img alt="LOGO" src="./deps/logo.png" width="210" height="210" />
+
+# MaaHatsuboshiTA | 初星助教
 
 为**学院偶像大师**的制作人们设计的自动化工具
 
