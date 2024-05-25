@@ -6,7 +6,7 @@
 
 为**学院偶像大师**的制作人们设计的自动化工具
 
-图像技术 + 模拟控制，解放双手！
+养肝护眼，解放双手
 
 由 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 强力驱动！
 
@@ -31,7 +31,7 @@
 
 ## 安装说明
 
-**安装路径不要包含中文**
+**TIPS：安装路径不要包含中文**
 
 ### Windows
 
@@ -83,6 +83,8 @@
 - B站：**午夜苏打_Official**  *私信* 或 *初星助教相关视频评论区*
 - 功能更加完善后可能会有企鹅群
 
-## 赞助
+## 支援作者
 
-如果你喜欢这个工具，可以[请我喝奶茶](https://afdian.net/a/midso)。
+<a href="https://afdian.net/a/midso">
+  <img width="180" src="https://pic1.afdiancdn.com/static/img/welcome/button-sponsorme.png">
+</a>
