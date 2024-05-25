@@ -4,11 +4,12 @@
 
 # MaaHatsuboshiTA | 初星助教
 
+<a href="https://github.com/MaaXYZ/MaaFramework"><img alt="Static Badge" src="https://img.shields.io/badge/PoweredBy-MaaFramework-green"></a>
+<img alt="platform" src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-blueviolet">
+<a href="https://gakuen.idolmaster-official.jp/"><img alt="Static Badge" src="https://img.shields.io/badge/Hatsuboshi-Gakuen-orange"></a>
+<a href="https://idolmaster.jp/"><img alt="THE IDOLM@STER" src="https://img.shields.io/badge/IDOL-M%40STER-ff779c.svg"></a>
+
 为**学院偶像大师**的制作人们设计的自动化工具
-
-养肝护眼，解放双手
-
-由 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 强力驱动！
 
 </div>
 
