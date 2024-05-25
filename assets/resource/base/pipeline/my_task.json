@@ -11,6 +11,9 @@
         "recognition": "TemplateMatch",
         "template": "icon_start_clear_data.png",
         "action": "Click",
+        "timeout_next": [
+            "Clear_Data_And_Start"
+        ],
         "next": [
             "Click_Clear_Data"
         ]
@@ -19,7 +22,9 @@
         "recognition": "TemplateMatch",
         "template": "icon_clear_data_OK.png",
         "action": "Click",
-        "timeout": 500000,
+        "timeout_next": [
+            "Enter_Clear_Data"
+        ],
         "next": [
             "Close_Menu"
         ]
@@ -29,7 +34,9 @@
         "template": "icon_close_menu.png",
         "action": "Click",
         "post_delay": 500,
-        "timeout": 500000,
+        "timeout_next": [
+            "Click_Clear_Data"
+        ],
         "next": [
             "Start_Game"
         ]
@@ -39,7 +46,9 @@
         "template": "logo_bandai.png",
         "action": "Click",
         "post_delay": 2000,
-        "timeout": 500000,
+        "timeout_next": [
+            "Close_Menu"
+        ],
         "next": [
             "Agree_Agreement_1"
         ]
@@ -49,7 +58,9 @@
         "template": "icon_agree_agreement_1.png",
         "action": "Click",
         "post_delay": 1000,
-        "timeout": 500000,
+        "timeout_next": [
+            "Start_Game"
+        ],
         "next": [
             "Agree_Agreement_2"
         ]
@@ -59,7 +70,9 @@
         "template": "icon_agree_agreement_2.png",
         "action": "Click",
         "post_delay": 1000,
-        "timeout": 500000,
+        "timeout_next": [
+            "Agree_Agreement_1"
+        ],
         "next": [
             "Skip_Guidance"
         ]
@@ -69,7 +82,9 @@
         "template": "icon_skip_guidance.png",
         "action": "Click",
         "post_delay": 500,
-        "timeout": 500000,
+        "timeout_next": [
+            "Agree_Agreement_2"
+        ],
         "next": [
             "Name_Producer"
         ]
@@ -79,7 +94,9 @@
         "template": "icon_name_ok.png",
         "action": "Click",
         "post_delay": 500,
-        "timeout": 500000,
+        "timeout_next": [
+            "Skip_Guidance"
+        ],
         "next": [
             "Check_Name"
         ]
@@ -94,7 +111,9 @@
             170
         ],
         "action": "Click",
-        "timeout": 500000,
+        "timeout_next": [
+            "Name_Producer"
+        ],
         "next": [
             "Go_To_Main"
         ]
