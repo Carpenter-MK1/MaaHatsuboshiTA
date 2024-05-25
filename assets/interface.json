@@ -15,11 +15,15 @@
     ],
     "task": [
         {
-            "name": "刷初始（暂时只支持指定SSR支援卡数量）",
-            "entry": "Clear_Data_And_Start",
+            "name": "刷初始（开始前将游戏退出至最外层标题页）",
+            "entry": "Clear_Data",
             "option": [
                 "需要SSR支援卡数量:"
             ]
+        },
+        {
+            "name": "弱智竞技场（开始前将游戏切换至主页/Home页）",
+            "entry": "Main_To_Contest"
         }
     ],
     "recognizer": {},

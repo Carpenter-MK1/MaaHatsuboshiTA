@@ -1,0 +1,134 @@
+{
+    "Main_To_Contest": {
+        "recognition": "TemplateMatch",
+        "template": "icon_contest.png",
+        "action": "Click",
+        "next": [
+            "Enter_Contest_Page"
+        ]
+    },
+    "Enter_Contest_Page": {
+        "recognition": "TemplateMatch",
+        "template": "text_contest.png",
+        "roi": [
+            279,
+            814,
+            273,
+            143
+        ],
+        "action": "Click",
+        "next": [
+            "Loop_Enter_Contest_Battle"
+        ]
+    },
+    "Loop_Enter_Contest_Battle": {
+        "next": [
+            "Flag_Power_Empty",
+            "Contest_Enemy_Choose"
+        ]
+    },
+    "Contest_Enemy_Choose": {
+        "recognition": "TemplateMatch",
+        "template": "icon_enemy_level.png",
+        "roi": [
+            63,
+            580,
+            153,
+            74
+        ],
+        "action": "Click",
+        "timeout_next": [
+            "Loop_Enter_Contest_Battle"
+        ],
+        "next": [
+            "Contest_Enemy_Choose",
+            "Start_Contest_Battle"
+        ]
+    },
+    "Start_Contest_Battle": {
+        "recognition": "TemplateMatch",
+        "template": "button_contest_battle_start.png",
+        "roi": [
+            231,
+            1029,
+            271,
+            144
+        ],
+        "action": "Click",
+        "next": [
+            "Start_Contest_Battle",
+            "Loop_Contest_Battle"
+        ]
+    },
+    "Loop_Contest_Battle": {
+        "next": [
+            "Flag_Contest_Battle_Over",
+            "Close_Present_And_Leave",
+            "Skip_Battle",
+            "Close_Others"
+        ]
+    },
+    "Close_Present_And_Leave": {
+        "recognition": "TemplateMatch",
+        "template": "button_present_close.png",
+        "roi": [
+            200,
+            1104,
+            315,
+            120
+        ],
+        "action": "Click"
+    },
+    "Skip_Battle": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "button_battle_skip.png",
+        "roi": [
+            579,
+            1125,
+            117,
+            76
+        ],
+        "action": "Click"
+    },
+    "Flag_Contest_Battle_Over": {
+        "recognition": "TemplateMatch",
+        "template": "icon_contest_battle_over.png",
+        "roi": [
+            190,
+            1094,
+            331,
+            144
+        ],
+        "action": "Click",
+        "next": [
+            "Flag_Contest_Battle_Over",
+            "Leave_Contest_Battle"
+        ]
+    },
+    "Leave_Contest_Battle": {
+        "recognition": "TemplateMatch",
+        "template": "button_contest_battle_over.png",
+        "roi": [
+            213,
+            1084,
+            297,
+            142
+        ],
+        "action": "Click",
+        "next": [
+            "Leave_Contest_Battle",
+            "Loop_Enter_Contest_Battle"
+        ]
+    },
+    "Flag_Power_Empty": {
+        "recognition": "TemplateMatch",
+        "template": "text_power_empty.png",
+        "roi": [
+            430,
+            0,
+            290,
+            101
+        ]
+    }
+}

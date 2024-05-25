@@ -1,8 +1,9 @@
 {
-    "Clear_Data_And_Start": {
+    "Clear_Data": {
         "recognition": "TemplateMatch",
         "template": "icon_menu.png",
         "action": "Click",
+        "post_wait_freezes": 200,
         "next": [
             "Enter_Clear_Data"
         ]
@@ -11,9 +12,7 @@
         "recognition": "TemplateMatch",
         "template": "icon_start_clear_data.png",
         "action": "Click",
-        "timeout_next": [
-            "Clear_Data_And_Start"
-        ],
+        "post_delay": 800,
         "next": [
             "Click_Clear_Data"
         ]
@@ -22,9 +21,6 @@
         "recognition": "TemplateMatch",
         "template": "icon_clear_data_OK.png",
         "action": "Click",
-        "timeout_next": [
-            "Enter_Clear_Data"
-        ],
         "next": [
             "Close_Menu"
         ]
@@ -33,112 +29,64 @@
         "recognition": "TemplateMatch",
         "template": "icon_close_menu.png",
         "action": "Click",
-        "post_delay": 500,
-        "timeout_next": [
-            "Click_Clear_Data"
-        ],
         "next": [
             "Start_Game"
         ]
+    },
+    "Loop_Goto_Home": {
+        "next": [
+            "Flag_In_Main",
+            "Click_All_Button",
+            "Close_Others"
+        ]
+    },
+    "Click_All_Button": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "icon_close_news.png",
+            "icon_name_check.png",
+            "icon_name_ok.png",
+            "icon_skip_guidance.png",
+            "icon_agree_agreement_2.png",
+            "icon_agree_agreement_1.png"
+        ],
+        "roi": [
+            2,
+            991,
+            718,
+            289
+        ],
+        "post_delay": 1000,
+        "action": "Click",
+        "is_sub": true
     },
     "Start_Game": {
         "recognition": "TemplateMatch",
         "template": "logo_bandai.png",
         "action": "Click",
-        "post_delay": 2000,
-        "timeout_next": [
-            "Close_Menu"
-        ],
         "next": [
-            "Agree_Agreement_1"
+            "Loop_Goto_Home"
         ]
-    },
-    "Agree_Agreement_1": {
-        "recognition": "TemplateMatch",
-        "template": "icon_agree_agreement_1.png",
-        "action": "Click",
-        "post_delay": 1000,
-        "timeout_next": [
-            "Start_Game"
-        ],
-        "next": [
-            "Agree_Agreement_2"
-        ]
-    },
-    "Agree_Agreement_2": {
-        "recognition": "TemplateMatch",
-        "template": "icon_agree_agreement_2.png",
-        "action": "Click",
-        "post_delay": 1000,
-        "timeout_next": [
-            "Agree_Agreement_1"
-        ],
-        "next": [
-            "Skip_Guidance"
-        ]
-    },
-    "Skip_Guidance": {
-        "recognition": "TemplateMatch",
-        "template": "icon_skip_guidance.png",
-        "action": "Click",
-        "post_delay": 500,
-        "timeout_next": [
-            "Agree_Agreement_2"
-        ],
-        "next": [
-            "Name_Producer"
-        ]
-    },
-    "Name_Producer": {
-        "recognition": "TemplateMatch",
-        "template": "icon_name_ok.png",
-        "action": "Click",
-        "post_delay": 500,
-        "timeout_next": [
-            "Skip_Guidance"
-        ],
-        "next": [
-            "Check_Name"
-        ]
-    },
-    "Check_Name": {
-        "recognition": "TemplateMatch",
-        "template": "icon_name_check.png",
-        "roi": [
-            341,
-            1071,
-            320,
-            170
-        ],
-        "action": "Click",
-        "timeout_next": [
-            "Name_Producer"
-        ],
-        "next": [
-            "Go_To_Main"
-        ]
-    },
-    "Go_To_Main": {
-        "next": [
-            "Flag_In_Main",
-            "Click_Close_News",
-            "Close_Others"
-        ]
-    },
-    "Click_Close_News": {
-        "recognition": "TemplateMatch",
-        "template": "icon_close_news.png",
-        "action": "Click",
-        "post_delay": 1000,
-        "is_sub": true
     },
     "Close_Others": {
         "action": "Click",
+        "target": [
+            189,
+            1265,
+            332,
+            15
+        ],
         "is_sub": true
     },
     "Flag_In_Main": {
         "recognition": "TemplateMatch",
         "template": "icon_home.png",
+        "roi": [
+            304,
+            1119,
+            107,
+            95
+        ],
         "next": [
             "open_gift"
         ]
@@ -172,7 +120,8 @@
         "template": "icon_back_to_main.png",
         "action": "Click",
         "next": [
-            "Go_To_Gacha"
+            "Go_To_Gacha",
+            "Click_All_Button"
         ]
     },
     "Go_To_Gacha": {
@@ -358,7 +307,7 @@
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "Clear_Data_And_Start"
+            "Clear_Data"
         ]
     }
 }
