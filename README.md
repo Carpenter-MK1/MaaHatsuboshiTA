@@ -38,8 +38,6 @@
 
 ## 安装说明
 
-**TIPS：安装路径不要包含中文**
-
 ### Windows
 
 - 对于绝大部分用户，请下载 `MaaHatsuboshiTA-win-x86_64-vXXX.zip`
