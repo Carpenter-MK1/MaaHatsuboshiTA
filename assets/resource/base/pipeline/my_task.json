@@ -3,7 +3,7 @@
         "recognition": "TemplateMatch",
         "template": "icon_menu.png",
         "action": "Click",
-        "post_wait_freezes": 200,
+        "post_delay": 800,
         "next": [
             "Enter_Clear_Data"
         ]
@@ -87,6 +87,7 @@
             107,
             95
         ],
+        "post_wait_freezes": 1000,
         "next": [
             "Click_All_Button",
             "open_gift"
