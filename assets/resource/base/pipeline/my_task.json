@@ -4,6 +4,12 @@
         "template": "icon_menu.png",
         "action": "Click",
         "post_delay": 800,
+        "roi": [
+            555,
+            1095,
+            160,
+            166
+        ],
         "next": [
             "Enter_Clear_Data"
         ]
@@ -229,16 +235,17 @@
         "template": "icon_support_storage.png",
         "action": "Click",
         "next": [
-            "Check_Support_Storage"
+            "Check_Support_Amount"
         ]
     },
-    "Check_Support_Storage": {
+    "Check_Support_Amount": {
         "pre_delay": 500,
         "next": [
             "Check_SSR_5",
             "Check_SSR_4",
             "Check_SSR_3",
             "Check_SSR_2",
+            "Check_SSR_1",
             "Open_Menu"
         ]
     },
@@ -252,7 +259,10 @@
             226,
             47
         ],
-        "action": "Click"
+        "next": [
+            "Check_Support_Specific_First"
+        ],
+        "threshold": 0.85
     },
     "Check_SSR_4": {
         "enabled": false,
@@ -264,7 +274,10 @@
             232,
             57
         ],
-        "action": "Click"
+        "next": [
+            "Check_Support_Specific_First"
+        ],
+        "threshold": 0.85
     },
     "Check_SSR_3": {
         "enabled": false,
@@ -276,7 +289,10 @@
             227,
             67
         ],
-        "action": "Click"
+        "next": [
+            "Check_Support_Specific_First"
+        ],
+        "threshold": 0.85
     },
     "Check_SSR_2": {
         "enabled": false,
@@ -288,7 +304,442 @@
             240,
             55
         ],
-        "action": "Click"
+        "next": [
+            "Check_Support_Specific_First"
+        ],
+        "threshold": 0.85
+    },
+    "Check_SSR_1": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "bar_ssr.png",
+        "roi": [
+            63,
+            514,
+            172,
+            43
+        ],
+        "next": [
+            "Check_Support_Specific_First"
+        ],
+        "threshold": 0.85
+    },
+    "Check_Support_Specific_First": {
+        "enabled": false,
+        "next": [
+            "Check_SSR_Specific_First_A",
+            "Check_SSR_Specific_First_B",
+            "Check_SSR_Specific_First_C",
+            "Check_SSR_Specific_First_D",
+            "Check_SSR_Specific_First_E",
+            "Check_SSR_Specific_First_F",
+            "Check_SSR_Specific_First_G",
+            "Check_SSR_Specific_First_H",
+            "Check_SSR_Specific_First_I",
+            "Check_SSR_Specific_First_J",
+            "Check_SSR_Specific_First_K",
+            "Check_SSR_Specific_First_L",
+            "Check_SSR_Specific_First_M",
+            "Check_SSR_Specific_First_N",
+            "Check_SSR_Specific_First_O",
+            "Open_Menu"
+        ]
+    },
+    "Check_SSR_Specific_First_A": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_a.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ],
+        "next": [
+            "Check_Support_Specific_Second"
+        ]
+    },
+    "Check_SSR_Specific_First_B": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_b.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ],
+        "next": [
+            "Check_Support_Specific_Second"
+        ]
+    },
+    "Check_SSR_Specific_First_C": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_c.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ],
+        "next": [
+            "Check_Support_Specific_Second"
+        ]
+    },
+    "Check_SSR_Specific_First_D": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_d.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ],
+        "next": [
+            "Check_Support_Specific_Second"
+        ]
+    },
+    "Check_SSR_Specific_First_E": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_e.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ],
+        "next": [
+            "Check_Support_Specific_Second"
+        ]
+    },
+    "Check_SSR_Specific_First_F": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_f.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ],
+        "next": [
+            "Check_Support_Specific_Second"
+        ]
+    },
+    "Check_SSR_Specific_First_G": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_g.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ],
+        "next": [
+            "Check_Support_Specific_Second"
+        ]
+    },
+    "Check_SSR_Specific_First_H": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_h.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ],
+        "next": [
+            "Check_Support_Specific_Second"
+        ]
+    },
+    "Check_SSR_Specific_First_I": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_i.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ],
+        "next": [
+            "Check_Support_Specific_Second"
+        ]
+    },
+    "Check_SSR_Specific_First_J": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_j.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ],
+        "next": [
+            "Check_Support_Specific_Second"
+        ]
+    },
+    "Check_SSR_Specific_First_K": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_k.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ],
+        "next": [
+            "Check_Support_Specific_Second"
+        ]
+    },
+    "Check_SSR_Specific_First_L": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_l.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ],
+        "next": [
+            "Check_Support_Specific_Second"
+        ]
+    },
+    "Check_SSR_Specific_First_M": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_m.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ],
+        "next": [
+            "Check_Support_Specific_Second"
+        ]
+    },
+    "Check_SSR_Specific_First_N": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_n.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ],
+        "next": [
+            "Check_Support_Specific_Second"
+        ]
+    },
+    "Check_SSR_Specific_First_O": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_o.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ],
+        "next": [
+            "Check_Support_Specific_Second"
+        ]
+    },
+    "Check_Support_Specific_Second": {
+        "enabled": false,
+        "next": [
+            "Check_SSR_Specific_Second_A",
+            "Check_SSR_Specific_Second_B",
+            "Check_SSR_Specific_Second_C",
+            "Check_SSR_Specific_Second_D",
+            "Check_SSR_Specific_Second_E",
+            "Check_SSR_Specific_Second_F",
+            "Check_SSR_Specific_Second_G",
+            "Check_SSR_Specific_Second_H",
+            "Check_SSR_Specific_Second_I",
+            "Check_SSR_Specific_Second_J",
+            "Check_SSR_Specific_Second_K",
+            "Check_SSR_Specific_Second_L",
+            "Check_SSR_Specific_Second_M",
+            "Check_SSR_Specific_Second_N",
+            "Check_SSR_Specific_Second_O",
+            "Open_Menu"
+        ]
+    },
+    "Check_SSR_Specific_Second_A": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_a.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ]
+    },
+    "Check_SSR_Specific_Second_B": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_b.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ]
+    },
+    "Check_SSR_Specific_Second_C": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_c.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ]
+    },
+    "Check_SSR_Specific_Second_D": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_d.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ]
+    },
+    "Check_SSR_Specific_Second_E": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_e.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ]
+    },
+    "Check_SSR_Specific_Second_F": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_f.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ]
+    },
+    "Check_SSR_Specific_Second_G": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_g.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ]
+    },
+    "Check_SSR_Specific_Second_H": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_h.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ]
+    },
+    "Check_SSR_Specific_Second_I": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_i.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ]
+    },
+    "Check_SSR_Specific_Second_J": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_j.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ]
+    },
+    "Check_SSR_Specific_Second_K": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_k.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ]
+    },
+    "Check_SSR_Specific_Second_L": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_l.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ]
+    },
+    "Check_SSR_Specific_Second_M": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_m.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ]
+    },
+    "Check_SSR_Specific_Second_N": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_n.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ]
+    },
+    "Check_SSR_Specific_Second_O": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_o.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ]
     },
     "Open_Menu": {
         "recognition": "TemplateMatch",

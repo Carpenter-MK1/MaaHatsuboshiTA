@@ -18,7 +18,9 @@
             "name": "刷初始（开始前将游戏退出至最外层标题页）",
             "entry": "Clear_Data",
             "option": [
-                "需要SSR支援卡数量:"
+                "不同SSR支援卡数量",
+                "第一张指定卡",
+                "第二张指定卡"
             ]
         },
         {
@@ -29,8 +31,16 @@
     "recognizer": {},
     "action": {},
     "option": {
-        "需要SSR支援卡数量:": {
+        "不同SSR支援卡数量": {
             "cases": [
+                {
+                    "name": "1张",
+                    "param": {
+                        "Check_SSR_1": {
+                            "enabled": true
+                        }
+                    }
+                },
                 {
                     "name": "2张",
                     "param": {
@@ -56,9 +66,355 @@
                     }
                 },
                 {
-                    "name": "5张",
+                    "name": "5张(幻想时间)",
                     "param": {
                         "Check_SSR_5": {
+                            "enabled": true
+                        }
+                    }
+                }
+            ]
+        },
+        "第一张指定卡": {
+            "cases": [
+                {
+                    "name": "【~~~不指定~~~】",
+                    "param": {}
+                },
+                {
+                    "name": "【Vo强化 & 物-Vo回合额外1动1次】她在干什么呢...（何やってるんだろう...）",
+                    "param": {
+                        "Check_SSR_Specific_First_A": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_First": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【体力与全课SP率强化 & 物-出行奶9体】你是令人骄傲的学生（きみは、自慢の生徒です）",
+                    "param": {
+                        "Check_SSR_Specific_First_B": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_First": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Vi强化 & 物-Vi回合攻击强化3次】也给你做了一份（あなたにも作ってあげる）",
+                    "param": {
+                        "Check_SSR_Specific_First_C": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_First": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Vi强化 & 物-Vi回合使用A卡奶2体3次】交给姐姐吧！（お姉ちゃんに任せなさい！）",
+                    "param": {
+                        "Check_SSR_Specific_First_D": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_First": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Da强化与Da课后奶 & 物-Da回合攻击强化3次】我不服啊……！（ぐぬぬぬぬ……！）",
+                    "param": {
+                        "Check_SSR_Specific_First_E": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_First": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Da强化 & 卡-奶3体+加1动】辛苦了，千奈同学（お疲れ様、千奈ちゃん）",
+                    "param": {
+                        "Check_SSR_Specific_First_F": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_First": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Vi与Vi课SP率强化 & 物-Vi回合加2盾】就像王子一样（まるで王子様みたいな）",
+                    "param": {
+                        "Check_SSR_Specific_First_G": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_First": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Da与DaSP率强化 & 卡-打3+加3盾+加1抽+次回加1抽】看起来好好吃，我开动了～！（おいしい顔、いただき～！）",
+                    "param": {
+                        "Check_SSR_Specific_First_H": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_First": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Vo与Vo课SP率强化 & 卡-手牌强化+加1动】可爱可爱超可爱！（可愛いと可愛いで可愛い！）",
+                    "param": {
+                        "Check_SSR_Specific_First_I": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_First": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Vi强化与Vi课后奶 & 物-Vi回合额外1动1次】我绝不会看走眼（私の目に狂いはない）",
+                    "param": {
+                        "Check_SSR_Specific_First_J": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_First": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Vo强化与Vo课后奶 & 物-Vo回合使用A卡奶2体3次】又那样勉强自己（また、あんなに無理をして）",
+                    "param": {
+                        "Check_SSR_Specific_First_K": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_First": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Vo强化 & 物-Vo回合加1抽加固定2盾3次】哎呀，真巧啊（あら、奇遇ね）",
+                    "param": {
+                        "Check_SSR_Specific_First_L": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_First": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Da强化 & 卡-永久减1体消费+加1动】这是真的吗（まじか。）",
+                    "param": {
+                        "Check_SSR_Specific_First_M": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_First": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Da强化 & 物-Da回合额外1动1次】来，我们一起搬吧♪（ほら、一緒に持と♪）",
+                    "param": {
+                        "Check_SSR_Specific_First_N": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_First": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Vo强化 & 卡-印1卡+加1动+次回加1抽】下一个樱花盛开的季节（次の桜の季節には）",
+                    "param": {
+                        "Check_SSR_Specific_First_O": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_First": {
+                            "enabled": true
+                        }
+                    }
+                }
+            ]
+        },
+        "第二张指定卡": {
+            "cases": [
+                {
+                    "name": "【~~~不指定~~~】",
+                    "param": {}
+                },
+                {
+                    "name": "【Vo强化 & 物-Vo回合额外1动1次】她在干什么呢...（何やってるんだろう...）",
+                    "param": {
+                        "Check_SSR_Specific_Second_A": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_Second": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【体力与全课SP率强化 & 物-出行奶9体】你是令人骄傲的学生（きみは、自慢の生徒です）",
+                    "param": {
+                        "Check_SSR_Specific_Second_B": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_Second": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Vi强化 & 物-Vi回合攻击强化3次】也给你做了一份（あなたにも作ってあげる）",
+                    "param": {
+                        "Check_SSR_Specific_Second_C": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_Second": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Vi强化 & 物-Vi回合使用A卡奶2体3次】交给姐姐吧！（お姉ちゃんに任せなさい！）",
+                    "param": {
+                        "Check_SSR_Specific_Second_D": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_Second": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Da强化与Da课后奶 & 物-Da回合攻击强化3次】我不服啊……！（ぐぬぬぬぬ……！）",
+                    "param": {
+                        "Check_SSR_Specific_Second_E": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_Second": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Da强化 & 卡-奶3体+加1动】辛苦了，千奈同学（お疲れ様、千奈ちゃん）",
+                    "param": {
+                        "Check_SSR_Specific_Second_F": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_Second": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Vi与Vi课SP率强化 & 物-Vi回合加2盾】就像王子一样（まるで王子様みたいな）",
+                    "param": {
+                        "Check_SSR_Specific_Second_G": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_Second": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Da与DaSP率强化 & 卡-打3+加3盾+加1抽+次回加1抽】看起来好好吃，我开动了～！（おいしい顔、いただき～！）",
+                    "param": {
+                        "Check_SSR_Specific_Second_H": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_Second": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Vo与Vo课SP率强化 & 卡-手牌强化+加1动】可爱可爱超可爱！（可愛いと可愛いで可愛い！）",
+                    "param": {
+                        "Check_SSR_Specific_Second_I": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_Second": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Vi强化与Vi课后奶 & 物-Vi回合额外1动1次】我绝不会看走眼（私の目に狂いはない）",
+                    "param": {
+                        "Check_SSR_Specific_Second_J": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_Second": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Vo强化与Vo课后奶 & 物-Vo回合使用A卡奶2体3次】又那样勉强自己（また、あんなに無理をして）",
+                    "param": {
+                        "Check_SSR_Specific_Second_K": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_Second": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Vo强化 & 物-Vo回合加1抽加固定2盾3次】哎呀，真巧啊（あら、奇遇ね）",
+                    "param": {
+                        "Check_SSR_Specific_Second_L": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_Second": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Da强化 & 卡-永久减1体消费+加1动】这是真的吗（まじか。）",
+                    "param": {
+                        "Check_SSR_Specific_Second_M": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_Second": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Da强化 & 物-Da回合额外1动1次】来，我们一起搬吧♪（ほら、一緒に持と♪）",
+                    "param": {
+                        "Check_SSR_Specific_Second_N": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_Second": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Vo强化 & 卡-印1卡+加1动+次回加1抽】下一个樱花盛开的季节（次の桜の季節には）",
+                    "param": {
+                        "Check_SSR_Specific_Second_O": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_Second": {
                             "enabled": true
                         }
                     }

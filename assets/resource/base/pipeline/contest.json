@@ -23,6 +23,7 @@
     },
     "Loop_Enter_Contest_Battle": {
         "next": [
+            "Click_All_Button",
             "Flag_Power_Empty",
             "Contest_Enemy_Choose"
         ]
@@ -124,6 +125,7 @@
     "Flag_Power_Empty": {
         "recognition": "TemplateMatch",
         "template": "text_power_empty.png",
+        "threshold": 0.9,
         "roi": [
             430,
             0,
