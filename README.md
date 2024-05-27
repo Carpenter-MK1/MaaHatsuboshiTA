@@ -9,7 +9,7 @@
 <a href="https://gakuen.idolmaster-official.jp/"><img alt="Static Badge" src="https://img.shields.io/badge/Hatsuboshi-Gakuen-orange"></a>
 <a href="https://idolmaster.jp/"><img alt="THE IDOLM@STER" src="https://img.shields.io/badge/IDOL-M%40STER-ff779c.svg"></a>
 
-为**学院偶像大师**的制作人们设计的自动化工具
+为**学园偶像大师**的制作人们设计的自动化工具
 
 </div>
 
