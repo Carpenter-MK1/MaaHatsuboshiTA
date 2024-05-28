@@ -2,6 +2,7 @@
     "Clear_Data": {
         "recognition": "TemplateMatch",
         "template": "icon_menu.png",
+        "threshold": 0.5,
         "action": "Click",
         "post_delay": 800,
         "roi": [
@@ -17,6 +18,7 @@
     "Enter_Clear_Data": {
         "recognition": "TemplateMatch",
         "template": "icon_start_clear_data.png",
+        "threshold": 0.5,
         "action": "Click",
         "post_delay": 800,
         "next": [
@@ -26,6 +28,7 @@
     "Click_Clear_Data": {
         "recognition": "TemplateMatch",
         "template": "icon_clear_data_OK.png",
+        "threshold": 0.5,
         "action": "Click",
         "next": [
             "Close_Menu"
@@ -34,6 +37,7 @@
     "Close_Menu": {
         "recognition": "TemplateMatch",
         "template": "icon_close_menu.png",
+        "threshold": 0.5,
         "action": "Click",
         "next": [
             "Start_Game"
@@ -69,6 +73,7 @@
     "Start_Game": {
         "recognition": "TemplateMatch",
         "template": "logo_bandai.png",
+        "threshold": 0.5,
         "action": "Click",
         "next": [
             "Loop_Goto_Home"
@@ -87,6 +92,7 @@
     "Flag_In_Main": {
         "recognition": "TemplateMatch",
         "template": "icon_home.png",
+        "threshold": 0.5,
         "roi": [
             304,
             1119,
@@ -102,6 +108,7 @@
     "open_gift": {
         "recognition": "TemplateMatch",
         "template": "icon_gift.png",
+        "threshold": 0.5,
         "action": "Click",
         "timeout_next": [
             "Loop_Goto_Home"
@@ -113,6 +120,7 @@
     "get_all_gift": {
         "recognition": "TemplateMatch",
         "template": "icon_get_all_gift.png",
+        "threshold": 0.5,
         "action": "Click",
         "next": [
             "close_gift_info"
@@ -121,6 +129,7 @@
     "close_gift_info": {
         "recognition": "TemplateMatch",
         "template": "icon_close_gift_info.png",
+        "threshold": 0.5,
         "action": "Click",
         "next": [
             "Back_To_Main"
@@ -129,6 +138,7 @@
     "Back_To_Main": {
         "recognition": "TemplateMatch",
         "template": "icon_back_to_main.png",
+        "threshold": 0.5,
         "action": "Click",
         "next": [
             "Go_To_Gacha",
@@ -138,6 +148,7 @@
     "Go_To_Gacha": {
         "recognition": "TemplateMatch",
         "template": "icon_gacha.png",
+        "threshold": 0.5,
         "action": "Click",
         "next": [
             "Gacha_1"
@@ -146,7 +157,14 @@
     "Gacha_1": {
         "recognition": "TemplateMatch",
         "template": "icon_gacha_with_diamonds.png",
+        "threshold": 0.5,
         "action": "Click",
+        "roi": [
+            360,
+            540,
+            360,
+            540
+        ],
         "next": [
             "Gacha_With_Diamonds_Confirm"
         ]
@@ -154,6 +172,7 @@
     "Gacha_With_Diamonds_Confirm": {
         "recognition": "TemplateMatch",
         "template": "icon_gacha_with_diamonds_confirm.png",
+        "threshold": 0.5,
         "action": "Click",
         "next": [
             "End_Gacha_1"
@@ -179,6 +198,7 @@
     "Leave_Gacha": {
         "recognition": "TemplateMatch",
         "template": "icon_leave_gacha.png",
+        "threshold": 0.5,
         "action": "Click",
         "next": [
             "Change_Pool"
@@ -187,6 +207,7 @@
     "Change_Pool": {
         "recognition": "TemplateMatch",
         "template": "icon_change_pool.png",
+        "threshold": 0.5,
         "action": "Click",
         "next": [
             "Gacha_2"
@@ -195,6 +216,7 @@
     "Gacha_2": {
         "recognition": "TemplateMatch",
         "template": "icon_gacha_with_10_tickets.png",
+        "threshold": 0.5,
         "action": "Click",
         "next": [
             "Gacha_With_10_Tickets_Confirm"
@@ -203,6 +225,7 @@
     "Gacha_With_10_Tickets_Confirm": {
         "recognition": "TemplateMatch",
         "template": "icon_gacha_with_10_tickets_confirm.png",
+        "threshold": 0.5,
         "action": "Click",
         "next": [
             "End_Gacha_2"
@@ -217,6 +240,40 @@
     "Leave_Gacha_2": {
         "recognition": "TemplateMatch",
         "template": "icon_leave_gacha_2.png",
+        "threshold": 0.5,
+        "action": "Click",
+        "next": [
+            "Gacha_3"
+        ]
+    },
+    "Gacha_3": {
+        "recognition": "TemplateMatch",
+        "template": "icon_gacha_with_10_tickets.png",
+        "threshold": 0.5,
+        "action": "Click",
+        "next": [
+            "Gacha_With_10_Tickets_Confirm_3"
+        ]
+    },
+    "Gacha_With_10_Tickets_Confirm_3": {
+        "recognition": "TemplateMatch",
+        "template": "icon_gacha_with_10_tickets_confirm.png",
+        "threshold": 0.5,
+        "action": "Click",
+        "next": [
+            "End_Gacha_3"
+        ]
+    },
+    "End_Gacha_3": {
+        "next": [
+            "Leave_Gacha_3",
+            "Skip_Gacha"
+        ]
+    },
+    "Leave_Gacha_3": {
+        "recognition": "TemplateMatch",
+        "template": "icon_leave_gacha_2.png",
+        "threshold": 0.5,
         "action": "Click",
         "next": [
             "Go_To_Idol"
@@ -225,6 +282,7 @@
     "Go_To_Idol": {
         "recognition": "TemplateMatch",
         "template": "icon_idol.png",
+        "threshold": 0.5,
         "action": "Click",
         "next": [
             "Open_Support_Storage"
@@ -233,6 +291,7 @@
     "Open_Support_Storage": {
         "recognition": "TemplateMatch",
         "template": "icon_support_storage.png",
+        "threshold": 0.5,
         "action": "Click",
         "next": [
             "Check_Support_Amount"
@@ -253,6 +312,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "bar_ssr.png",
+        "threshold": 0.5,
         "roi": [
             251,
             632,
@@ -268,6 +328,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "bar_ssr.png",
+        "threshold": 0.5,
         "roi": [
             22,
             628,
@@ -283,6 +344,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "bar_ssr.png",
+        "threshold": 0.5,
         "roi": [
             467,
             493,
@@ -298,6 +360,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "bar_ssr.png",
+        "threshold": 0.5,
         "roi": [
             239,
             496,
@@ -313,6 +376,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "bar_ssr.png",
+        "threshold": 0.5,
         "roi": [
             63,
             514,
@@ -349,6 +413,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_a.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -363,6 +428,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_b.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -377,6 +443,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_c.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -391,6 +458,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_d.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -405,6 +473,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_e.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -419,6 +488,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_f.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -433,6 +503,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_g.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -447,6 +518,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_h.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -461,6 +533,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_i.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -475,6 +548,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_j.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -489,6 +563,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_k.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -503,6 +578,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_l.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -517,6 +593,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_m.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -531,6 +608,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_n.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -545,6 +623,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_o.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -580,6 +659,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_a.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -591,6 +671,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_b.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -602,6 +683,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_c.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -613,6 +695,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_d.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -624,6 +707,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_e.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -635,6 +719,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_f.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -646,6 +731,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_g.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -657,6 +743,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_h.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -668,6 +755,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_i.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -679,6 +767,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_j.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -690,6 +779,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_k.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -701,6 +791,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_l.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -712,6 +803,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_m.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -723,6 +815,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_n.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -734,6 +827,7 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_o.png",
+        "threshold": 0.5,
         "roi": [
             14,
             406,
@@ -744,6 +838,7 @@
     "Open_Menu": {
         "recognition": "TemplateMatch",
         "template": "icon_menu.png",
+        "threshold": 0.5,
         "action": "Click",
         "next": [
             "Leave_Game"
@@ -752,6 +847,7 @@
     "Leave_Game": {
         "recognition": "TemplateMatch",
         "template": "icon_leave_game.png",
+        "threshold": 0.5,
         "action": "Click",
         "next": [
             "Confirm_Leave_Game"
@@ -760,6 +856,7 @@
     "Confirm_Leave_Game": {
         "recognition": "TemplateMatch",
         "template": "icon_confirm_leave_game.png",
+        "threshold": 0.5,
         "action": "Click",
         "post_delay": 1000,
         "next": [
