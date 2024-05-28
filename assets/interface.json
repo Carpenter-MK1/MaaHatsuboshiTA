@@ -18,6 +18,7 @@
             "name": "刷初始（开始前将游戏退出至最外层标题页）",
             "entry": "Clear_Data",
             "option": [
+                "抽什么池",
                 "不同SSR支援卡数量",
                 "第一张指定卡",
                 "第二张指定卡"
@@ -31,6 +32,26 @@
     "recognizer": {},
     "action": {},
     "option": {
+        "抽什么池": {
+            "cases": [
+                {
+                    "name": "UP池10连（保底不继承）+普池20连",
+                    "param": {
+                        "Gacha_UP_Pool": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "全部抽普池30连",
+                    "param": {
+                        "Gacha_Normel_Pool": {
+                            "enabled": true
+                        }
+                    }
+                }
+            ]
+        },
         "不同SSR支援卡数量": {
             "cases": [
                 {

@@ -1,15 +1,17 @@
 {
     "Clear_Data": {
         "recognition": "TemplateMatch",
-        "template": "icon_menu.png",
+        "template": "icon_menu_green_mask.png",
         "action": "Click",
         "post_delay": 800,
         "roi": [
-            555,
-            1095,
-            160,
-            166
+            575,
+            1117,
+            145,
+            163
         ],
+        "green_mask": true,
+        "threshold": 0.5,
         "next": [
             "Enter_Clear_Data"
         ]
@@ -140,59 +142,25 @@
         "template": "icon_gacha.png",
         "action": "Click",
         "next": [
-            "Gacha_1"
+            "Pool_Judgement"
         ]
     },
-    "Gacha_1": {
-        "recognition": "TemplateMatch",
-        "template": "icon_gacha_with_diamonds.png",
-        "action": "Click",
+    "Pool_Judgement": {
         "next": [
-            "Gacha_With_Diamonds_Confirm"
+            "Gacha_Normel_Pool",
+            "Gacha_UP_Pool"
         ]
     },
-    "Gacha_With_Diamonds_Confirm": {
-        "recognition": "TemplateMatch",
-        "template": "icon_gacha_with_diamonds_confirm.png",
-        "action": "Click",
+    "Gacha_Normel_Pool": {
+        "enabled": false,
         "next": [
-            "End_Gacha_1"
+            "Change_Pool",
+            "Gacha_With_Tickets",
+            "Gacha_Normel_With_Diamonds_And_Leave"
         ]
     },
-    "End_Gacha_1": {
-        "next": [
-            "Leave_Gacha",
-            "Skip_Gacha"
-        ]
-    },
-    "Skip_Gacha": {
+    "Gacha_With_Tickets": {
         "is_sub": true,
-        "recognition": "DirectHit",
-        "action": "Click",
-        "target": [
-            622,
-            1199,
-            61,
-            24
-        ]
-    },
-    "Leave_Gacha": {
-        "recognition": "TemplateMatch",
-        "template": "icon_leave_gacha.png",
-        "action": "Click",
-        "next": [
-            "Change_Pool"
-        ]
-    },
-    "Change_Pool": {
-        "recognition": "TemplateMatch",
-        "template": "icon_change_pool.png",
-        "action": "Click",
-        "next": [
-            "Gacha_2"
-        ]
-    },
-    "Gacha_2": {
         "recognition": "TemplateMatch",
         "template": "icon_gacha_with_10_tickets.png",
         "action": "Click",
@@ -205,21 +173,105 @@
         "template": "icon_gacha_with_10_tickets_confirm.png",
         "action": "Click",
         "next": [
-            "End_Gacha_2"
+            "End_Gacha"
         ]
     },
-    "End_Gacha_2": {
+    "End_Gacha": {
         "next": [
-            "Leave_Gacha_2",
+            "Leave_Gacha",
             "Skip_Gacha"
         ]
     },
-    "Leave_Gacha_2": {
+    "Leave_Gacha": {
         "recognition": "TemplateMatch",
-        "template": "icon_leave_gacha_2.png",
+        "template": "icon_leave_gacha.png",
+        "action": "Click"
+    },
+    "Gacha_Normel_With_Diamonds_And_Leave": {
+        "recognition": "TemplateMatch",
+        "template": "icon_gacha_with_diamonds.png",
+        "action": "Click",
+        "next": [
+            "Gacha_Normel_With_Diamonds_Confirm"
+        ]
+    },
+    "Gacha_Normel_With_Diamonds_Confirm": {
+        "recognition": "TemplateMatch",
+        "template": "icon_gacha_with_diamonds_confirm.png",
+        "action": "Click",
+        "next": [
+            "End_Gacha_Normel_With_Diamonds"
+        ]
+    },
+    "End_Gacha_Normel_With_Diamonds": {
+        "next": [
+            "Leave_Gacha_Normel_With_Diamonds",
+            "Skip_Gacha"
+        ]
+    },
+    "Leave_Gacha_Normel_With_Diamonds": {
+        "recognition": "TemplateMatch",
+        "template": "icon_leave_gacha.png",
         "action": "Click",
         "next": [
             "Go_To_Idol"
+        ]
+    },
+    "Change_Pool": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "icon_change_pool.png",
+        "action": "Click"
+    },
+    "Gacha_UP_Pool": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "icon_gacha_with_diamonds.png",
+        "action": "Click",
+        "next": [
+            "Gacha_UP_With_Diamonds_Confirm"
+        ]
+    },
+    "Gacha_UP_With_Diamonds_Confirm": {
+        "recognition": "TemplateMatch",
+        "template": "icon_gacha_with_diamonds_confirm.png",
+        "action": "Click",
+        "next": [
+            "End_Gacha_UP_With_Diamonds"
+        ]
+    },
+    "End_Gacha_UP_With_Diamonds": {
+        "next": [
+            "Leave_Gacha_UP_With_Diamonds",
+            "Skip_Gacha"
+        ]
+    },
+    "Leave_Gacha_UP_With_Diamonds": {
+        "recognition": "TemplateMatch",
+        "template": "icon_leave_gacha.png",
+        "action": "Click",
+        "next": [
+            "Change_Pool_And_Gacha_Normel"
+        ]
+    },
+    "Change_Pool_And_Gacha_Normel": {
+        "recognition": "TemplateMatch",
+        "template": "icon_change_pool.png",
+        "action": "Click",
+        "next": [
+            "Gacha_With_Tickets",
+            "Go_To_Idol"
+        ]
+    },
+    "Skip_Gacha": {
+        "is_sub": true,
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [
+            622,
+            1199,
+            61,
+            24
         ]
     },
     "Go_To_Idol": {

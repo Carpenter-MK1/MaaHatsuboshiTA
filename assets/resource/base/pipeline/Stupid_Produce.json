@@ -1,0 +1,44 @@
+{
+    "Main_To_Produce": {
+        "recognition": "TemplateMatch",
+        "template": "button_produce.png",
+        "action": "Click",
+        "next": [
+            "Loop_Produce_To_Choose_Idol"
+        ]
+    },
+    "Loop_Produce_To_Choose_Idol": {
+        "next": [
+            "Flag_In_Choose_Idol",
+            "Choose_Difficulty",
+            "Confirm_Use_AP_Drink"
+        ]
+    },
+    "Choose_Difficulty": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "button_difficulty_pro.png",
+        "action": "Click"
+    },
+    "Confirm_Use_AP_Drink": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "button_use_AP_drink_1.png",
+            "button_use_AP_drink_2.png"
+        ],
+        "roi": [
+            0,
+            798,
+            720,
+            482
+        ],
+        "action": "Click"
+    },
+    "Flag_In_Choose_Idol": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "flag_in_choose_idol.png",
+        "action": "Click"
+    }
+}

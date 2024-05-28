@@ -1,6 +1,6 @@
 <div align="center">
 
-<img alt="LOGO" src="./deps/logo.png" width="200" height="200" />
+<img alt="LOGO" src="./logo.png" width="200" height="200" />
 
 # MaaHatsuboshiTA | 初星助教
 
@@ -47,9 +47,11 @@
 ### macOS
 
 - 若使用 Intel 处理器，请下载 `MaaHatsuboshiTA-macos-x86_64-vXXX.zip`
-- 若使用 M1, M2 等 arm 处理器，请下载 `MaaHatsuboshiTA-macos-aarch64-vXXX.zip`
-- 使用方式：
 
+- 若使用 M1, M2 等 arm 处理器，请下载 `MaaHatsuboshiTA-macos-aarch64-vXXX.zip`
+
+- 使用方式：
+  
   ```bash
   chmod a+x MaaPiCli
   ./MaaPiCli
