@@ -1,7 +1,7 @@
 {
     "controller": [
         {
-            "name": "安卓端",
+            "name": "android",
             "type": "Adb"
         }
     ],
@@ -15,27 +15,27 @@
     ],
     "task": [
         {
-            "name": "刷初始（开始前将游戏退出至最外层标题页）",
+            "name": "刷初始（开始前将游戏退至最外标题页）| Farm New Account (To Title Page First)",
             "entry": "Clear_Data",
             "option": [
-                "抽什么池",
-                "不同SSR支援卡数量",
-                "第一张指定卡",
-                "第二张指定卡"
+                "抽什么池 | Which Pool",
+                "不同SSR支援卡数量 | S-SSR Number Needed",
+                "第一张指定卡 | First Specific",
+                "第二张指定卡 | Second Specific"
             ]
         },
         {
-            "name": "弱智竞技场（开始前将游戏切换至主页/Home页）",
+            "name": "弱智竞技场（开始前将游戏切换至Home页）| Auto Contest (To Home Page First)",
             "entry": "Main_To_Contest"
         }
     ],
     "recognizer": {},
     "action": {},
     "option": {
-        "抽什么池": {
+        "抽什么池 | Which Pool": {
             "cases": [
                 {
-                    "name": "UP池10连（保底不继承）+普池20连",
+                    "name": "UP池10连+普池20连 | 10UP+20Normel",
                     "param": {
                         "Gacha_UP_Pool": {
                             "enabled": true
@@ -43,7 +43,7 @@
                     }
                 },
                 {
-                    "name": "全部抽普池30连",
+                    "name": "全部抽普池30连 | 30Normel",
                     "param": {
                         "Gacha_Normel_Pool": {
                             "enabled": true
@@ -52,7 +52,7 @@
                 }
             ]
         },
-        "不同SSR支援卡数量": {
+        "不同SSR支援卡数量 | S-SSR Number Needed": {
             "cases": [
                 {
                     "name": "1张",
@@ -96,10 +96,10 @@
                 }
             ]
         },
-        "第一张指定卡": {
+        "第一张指定卡 | First Specific": {
             "cases": [
                 {
-                    "name": "【~~~不指定~~~】",
+                    "name": "【---不指定 No Specific---】",
                     "param": {}
                 },
                 {
@@ -269,10 +269,10 @@
                 }
             ]
         },
-        "第二张指定卡": {
+        "第二张指定卡 | Second Specific": {
             "cases": [
                 {
-                    "name": "【~~~不指定~~~】",
+                    "name": "【---不指定 No Specific---】",
                     "param": {}
                 },
                 {

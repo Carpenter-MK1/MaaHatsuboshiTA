@@ -3,6 +3,7 @@
         "recognition": "TemplateMatch",
         "template": "icon_menu_green_mask.png",
         "action": "Click",
+        "timeout": 30000,
         "post_delay": 800,
         "roi": [
             575,
@@ -163,6 +164,7 @@
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "icon_gacha_with_10_tickets.png",
+        "order_by": "Score",
         "action": "Click",
         "next": [
             "Gacha_With_10_Tickets_Confirm"
@@ -190,6 +192,7 @@
     "Gacha_Normel_With_Diamonds_And_Leave": {
         "recognition": "TemplateMatch",
         "template": "icon_gacha_with_diamonds.png",
+        "order_by": "Score",
         "action": "Click",
         "next": [
             "Gacha_Normel_With_Diamonds_Confirm"
@@ -221,12 +224,14 @@
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "icon_change_pool.png",
+        "post_delay": 1500,
         "action": "Click"
     },
     "Gacha_UP_Pool": {
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "icon_gacha_with_diamonds.png",
+        "order_by": "Score",
         "action": "Click",
         "next": [
             "Gacha_UP_With_Diamonds_Confirm"
@@ -257,6 +262,7 @@
     "Change_Pool_And_Gacha_Normel": {
         "recognition": "TemplateMatch",
         "template": "icon_change_pool.png",
+        "post_delay": 1500,
         "action": "Click",
         "next": [
             "Gacha_With_Tickets",
@@ -304,77 +310,152 @@
     "Check_SSR_5": {
         "enabled": false,
         "recognition": "TemplateMatch",
-        "template": "bar_ssr.png",
+        "template": [
+            "card/card_ssr_a.png",
+            "card/card_ssr_b.png",
+            "card/card_ssr_c.png",
+            "card/card_ssr_d.png",
+            "card/card_ssr_e.png",
+            "card/card_ssr_f.png",
+            "card/card_ssr_g.png",
+            "card/card_ssr_h.png",
+            "card/card_ssr_i.png",
+            "card/card_ssr_j.png",
+            "card/card_ssr_k.png",
+            "card/card_ssr_l.png",
+            "card/card_ssr_m.png",
+            "card/card_ssr_n.png",
+            "card/card_ssr_o.png"
+        ],
         "roi": [
-            251,
-            632,
-            226,
-            47
-        ],
-        "next": [
-            "Check_Support_Specific_First"
-        ],
-        "threshold": 0.85
-    },
-    "Check_SSR_4": {
-        "enabled": false,
-        "recognition": "TemplateMatch",
-        "template": "bar_ssr.png",
-        "roi": [
-            22,
-            628,
-            232,
-            57
-        ],
-        "next": [
-            "Check_Support_Specific_First"
-        ],
-        "threshold": 0.85
-    },
-    "Check_SSR_3": {
-        "enabled": false,
-        "recognition": "TemplateMatch",
-        "template": "bar_ssr.png",
-        "roi": [
-            467,
-            493,
-            227,
+            253,
+            548,
+            215,
             67
         ],
         "next": [
             "Check_Support_Specific_First"
+        ]
+    },
+    "Check_SSR_4": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": [
+            "card/card_ssr_a.png",
+            "card/card_ssr_b.png",
+            "card/card_ssr_c.png",
+            "card/card_ssr_d.png",
+            "card/card_ssr_e.png",
+            "card/card_ssr_f.png",
+            "card/card_ssr_g.png",
+            "card/card_ssr_h.png",
+            "card/card_ssr_i.png",
+            "card/card_ssr_j.png",
+            "card/card_ssr_k.png",
+            "card/card_ssr_l.png",
+            "card/card_ssr_m.png",
+            "card/card_ssr_n.png",
+            "card/card_ssr_o.png"
         ],
-        "threshold": 0.85
+        "roi": [
+            34,
+            549,
+            210,
+            66
+        ],
+        "next": [
+            "Check_Support_Specific_First"
+        ]
+    },
+    "Check_SSR_3": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": [
+            "card/card_ssr_a.png",
+            "card/card_ssr_b.png",
+            "card/card_ssr_c.png",
+            "card/card_ssr_d.png",
+            "card/card_ssr_e.png",
+            "card/card_ssr_f.png",
+            "card/card_ssr_g.png",
+            "card/card_ssr_h.png",
+            "card/card_ssr_i.png",
+            "card/card_ssr_j.png",
+            "card/card_ssr_k.png",
+            "card/card_ssr_l.png",
+            "card/card_ssr_m.png",
+            "card/card_ssr_n.png",
+            "card/card_ssr_o.png"
+        ],
+        "roi": [
+            475,
+            420,
+            214,
+            64
+        ],
+        "next": [
+            "Check_Support_Specific_First"
+        ]
     },
     "Check_SSR_2": {
         "enabled": false,
         "recognition": "TemplateMatch",
-        "template": "bar_ssr.png",
+        "template": [
+            "card/card_ssr_a.png",
+            "card/card_ssr_b.png",
+            "card/card_ssr_c.png",
+            "card/card_ssr_d.png",
+            "card/card_ssr_e.png",
+            "card/card_ssr_f.png",
+            "card/card_ssr_g.png",
+            "card/card_ssr_h.png",
+            "card/card_ssr_i.png",
+            "card/card_ssr_j.png",
+            "card/card_ssr_k.png",
+            "card/card_ssr_l.png",
+            "card/card_ssr_m.png",
+            "card/card_ssr_n.png",
+            "card/card_ssr_o.png"
+        ],
         "roi": [
-            239,
-            496,
-            240,
-            55
+            252,
+            421,
+            215,
+            67
         ],
         "next": [
             "Check_Support_Specific_First"
-        ],
-        "threshold": 0.85
+        ]
     },
     "Check_SSR_1": {
         "enabled": false,
         "recognition": "TemplateMatch",
-        "template": "bar_ssr.png",
+        "template": [
+            "card/card_ssr_a.png",
+            "card/card_ssr_b.png",
+            "card/card_ssr_c.png",
+            "card/card_ssr_d.png",
+            "card/card_ssr_e.png",
+            "card/card_ssr_f.png",
+            "card/card_ssr_g.png",
+            "card/card_ssr_h.png",
+            "card/card_ssr_i.png",
+            "card/card_ssr_j.png",
+            "card/card_ssr_k.png",
+            "card/card_ssr_l.png",
+            "card/card_ssr_m.png",
+            "card/card_ssr_n.png",
+            "card/card_ssr_o.png"
+        ],
         "roi": [
-            63,
-            514,
-            172,
-            43
+            36,
+            420,
+            209,
+            84
         ],
         "next": [
             "Check_Support_Specific_First"
-        ],
-        "threshold": 0.85
+        ]
     },
     "Check_Support_Specific_First": {
         "enabled": false,
