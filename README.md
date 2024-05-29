@@ -95,6 +95,16 @@
 - **汇报问题优先使用issue功能**
 - 企鹅群：[971618596](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=2zMt_FrrG_qeW-NpJubuHsE7lRjz_UMJ&authKey=GUiDPRYCkfpxoLxhcAzbEXZCm9LnqQSJoJ6FqafpU%2BxTPGFLtD5seFrtns%2Fdwk2k&noverify=0&group_code=971618596) 
 
+## 声明
+
+本软件免费开源，仅供学习交流使用。开发者团队拥有本项目的最终解释权。
+
+本软件仅通过游戏提供的用户界面与游戏程序进行交互，不会以任何形式读取或修改游戏的文件或代码。
+
+使用本软件产生的任何问题或后果与本软件及开发者团队无关。任何商家利用本软件提供代练等商业服务所产生的任何问题或后果，与本软件及开发者团队无关。
+
+下载并使用本软件即表示您已阅读并同意上述声明。
+
 ## 支援作者
 
 <a href="https://afdian.net/a/midso">
