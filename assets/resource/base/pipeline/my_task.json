@@ -3,7 +3,7 @@
         "recognition": "TemplateMatch",
         "template": "icon_menu_green_mask.png",
         "action": "Click",
-        "timeout": 30000,
+        "timeout": 50000,
         "post_delay": 800,
         "roi": [
             575,
@@ -57,13 +57,14 @@
             "icon_name_ok.png",
             "icon_skip_guidance.png",
             "icon_agree_agreement_2.png",
-            "icon_agree_agreement_1.png"
+            "icon_agree_agreement_1.png",
+            "icon_cross.png"
         ],
         "roi": [
-            2,
-            991,
-            718,
-            289
+            141,
+            909,
+            579,
+            371
         ],
         "post_delay": 1000,
         "action": "Click",
@@ -157,7 +158,7 @@
         "next": [
             "Change_Pool",
             "Gacha_With_Tickets",
-            "Gacha_Normel_With_Diamonds_And_Leave"
+            "Gacha_Normel_With_Diamonds"
         ]
     },
     "Gacha_With_Tickets": {
@@ -166,6 +167,7 @@
         "template": "icon_gacha_with_10_tickets.png",
         "order_by": "Score",
         "action": "Click",
+        "post_delay": 1000,
         "next": [
             "Gacha_With_10_Tickets_Confirm"
         ]
@@ -188,6 +190,37 @@
         "recognition": "TemplateMatch",
         "template": "icon_leave_gacha.png",
         "action": "Click"
+    },
+    "Gacha_Normel_With_Diamonds": {
+        "recognition": "TemplateMatch",
+        "template": "icon_gacha_with_diamonds.png",
+        "order_by": "Score",
+        "action": "Click",
+        "next": [
+            "Gacha_Normel_With_Diamonds_Confirm_First"
+        ]
+    },
+    "Gacha_Normel_With_Diamonds_Confirm_First": {
+        "recognition": "TemplateMatch",
+        "template": "icon_gacha_with_diamonds_confirm.png",
+        "action": "Click",
+        "next": [
+            "End_Gacha_Normel_With_Diamonds_First"
+        ]
+    },
+    "End_Gacha_Normel_With_Diamonds_First": {
+        "next": [
+            "Leave_Gacha_Normel_With_Diamonds_First",
+            "Skip_Gacha"
+        ]
+    },
+    "Leave_Gacha_Normel_With_Diamonds_First": {
+        "recognition": "TemplateMatch",
+        "template": "icon_leave_gacha.png",
+        "action": "Click",
+        "next": [
+            "Gacha_Normel_With_Diamonds_And_Leave"
+        ]
     },
     "Gacha_Normel_With_Diamonds_And_Leave": {
         "recognition": "TemplateMatch",
@@ -233,8 +266,33 @@
         "template": "icon_gacha_with_diamonds.png",
         "order_by": "Score",
         "action": "Click",
+        "post_delay": 1000,
         "next": [
             "Gacha_UP_With_Diamonds_Confirm"
+        ]
+    },
+    "Gacha_UP_Pool_Second": {
+        "recognition": "TemplateMatch",
+        "template": "icon_gacha_with_diamonds.png",
+        "order_by": "Score",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "Gacha_UP_With_Diamonds_Confirm_Second"
+        ]
+    },
+    "Gacha_UP_With_Diamonds_Confirm_Second": {
+        "recognition": "TemplateMatch",
+        "template": "icon_gacha_with_diamonds_confirm.png",
+        "action": "Click",
+        "next": [
+            "End_Gacha_UP_With_Diamonds_Second"
+        ]
+    },
+    "End_Gacha_UP_With_Diamonds_Second": {
+        "next": [
+            "Leave_Gacha_UP_With_Diamonds",
+            "Skip_Gacha"
         ]
     },
     "Gacha_UP_With_Diamonds_Confirm": {
@@ -247,8 +305,16 @@
     },
     "End_Gacha_UP_With_Diamonds": {
         "next": [
-            "Leave_Gacha_UP_With_Diamonds",
+            "Leave_Gacha_UP_With_Diamonds_First",
             "Skip_Gacha"
+        ]
+    },
+    "Leave_Gacha_UP_With_Diamonds_First": {
+        "recognition": "TemplateMatch",
+        "template": "icon_leave_gacha.png",
+        "action": "Click",
+        "next": [
+            "Gacha_UP_Pool_Second"
         ]
     },
     "Leave_Gacha_UP_With_Diamonds": {
@@ -299,12 +365,45 @@
     "Check_Support_Amount": {
         "pre_delay": 500,
         "next": [
+            "Check_SSR_6",
             "Check_SSR_5",
             "Check_SSR_4",
             "Check_SSR_3",
             "Check_SSR_2",
             "Check_SSR_1",
             "Open_Menu"
+        ]
+    },
+    "Check_SSR_6": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": [
+            "card/card_ssr_a.png",
+            "card/card_ssr_b.png",
+            "card/card_ssr_c.png",
+            "card/card_ssr_d.png",
+            "card/card_ssr_e.png",
+            "card/card_ssr_f.png",
+            "card/card_ssr_g.png",
+            "card/card_ssr_h.png",
+            "card/card_ssr_i.png",
+            "card/card_ssr_j.png",
+            "card/card_ssr_k.png",
+            "card/card_ssr_l.png",
+            "card/card_ssr_m.png",
+            "card/card_ssr_n.png",
+            "card/card_ssr_o.png",
+            "card/card_ssr_p.png"
+        ],
+        "roi": [
+            469,
+            539,
+            230,
+            138
+        ],
+        "next": [
+            "Check_Support_Specific_First",
+            "End_All"
         ]
     },
     "Check_SSR_5": {
@@ -325,7 +424,8 @@
             "card/card_ssr_l.png",
             "card/card_ssr_m.png",
             "card/card_ssr_n.png",
-            "card/card_ssr_o.png"
+            "card/card_ssr_o.png",
+            "card/card_ssr_p.png"
         ],
         "roi": [
             253,
@@ -334,7 +434,8 @@
             67
         ],
         "next": [
-            "Check_Support_Specific_First"
+            "Check_Support_Specific_First",
+            "End_All"
         ]
     },
     "Check_SSR_4": {
@@ -355,7 +456,8 @@
             "card/card_ssr_l.png",
             "card/card_ssr_m.png",
             "card/card_ssr_n.png",
-            "card/card_ssr_o.png"
+            "card/card_ssr_o.png",
+            "card/card_ssr_p.png"
         ],
         "roi": [
             34,
@@ -364,7 +466,8 @@
             66
         ],
         "next": [
-            "Check_Support_Specific_First"
+            "Check_Support_Specific_First",
+            "End_All"
         ]
     },
     "Check_SSR_3": {
@@ -385,7 +488,8 @@
             "card/card_ssr_l.png",
             "card/card_ssr_m.png",
             "card/card_ssr_n.png",
-            "card/card_ssr_o.png"
+            "card/card_ssr_o.png",
+            "card/card_ssr_p.png"
         ],
         "roi": [
             475,
@@ -394,7 +498,8 @@
             64
         ],
         "next": [
-            "Check_Support_Specific_First"
+            "Check_Support_Specific_First",
+            "End_All"
         ]
     },
     "Check_SSR_2": {
@@ -415,7 +520,8 @@
             "card/card_ssr_l.png",
             "card/card_ssr_m.png",
             "card/card_ssr_n.png",
-            "card/card_ssr_o.png"
+            "card/card_ssr_o.png",
+            "card/card_ssr_p.png"
         ],
         "roi": [
             252,
@@ -424,7 +530,8 @@
             67
         ],
         "next": [
-            "Check_Support_Specific_First"
+            "Check_Support_Specific_First",
+            "End_All"
         ]
     },
     "Check_SSR_1": {
@@ -445,7 +552,8 @@
             "card/card_ssr_l.png",
             "card/card_ssr_m.png",
             "card/card_ssr_n.png",
-            "card/card_ssr_o.png"
+            "card/card_ssr_o.png",
+            "card/card_ssr_p.png"
         ],
         "roi": [
             36,
@@ -454,7 +562,8 @@
             84
         ],
         "next": [
-            "Check_Support_Specific_First"
+            "Check_Support_Specific_First",
+            "End_All"
         ]
     },
     "Check_Support_Specific_First": {
@@ -475,6 +584,7 @@
             "Check_SSR_Specific_First_M",
             "Check_SSR_Specific_First_N",
             "Check_SSR_Specific_First_O",
+            "Check_SSR_Specific_First_P",
             "Open_Menu"
         ]
     },
@@ -489,7 +599,8 @@
             489
         ],
         "next": [
-            "Check_Support_Specific_Second"
+            "Check_Support_Specific_Second",
+            "End_All"
         ]
     },
     "Check_SSR_Specific_First_B": {
@@ -503,7 +614,8 @@
             489
         ],
         "next": [
-            "Check_Support_Specific_Second"
+            "Check_Support_Specific_Second",
+            "End_All"
         ]
     },
     "Check_SSR_Specific_First_C": {
@@ -517,7 +629,8 @@
             489
         ],
         "next": [
-            "Check_Support_Specific_Second"
+            "Check_Support_Specific_Second",
+            "End_All"
         ]
     },
     "Check_SSR_Specific_First_D": {
@@ -531,7 +644,8 @@
             489
         ],
         "next": [
-            "Check_Support_Specific_Second"
+            "Check_Support_Specific_Second",
+            "End_All"
         ]
     },
     "Check_SSR_Specific_First_E": {
@@ -545,7 +659,8 @@
             489
         ],
         "next": [
-            "Check_Support_Specific_Second"
+            "Check_Support_Specific_Second",
+            "End_All"
         ]
     },
     "Check_SSR_Specific_First_F": {
@@ -559,7 +674,8 @@
             489
         ],
         "next": [
-            "Check_Support_Specific_Second"
+            "Check_Support_Specific_Second",
+            "End_All"
         ]
     },
     "Check_SSR_Specific_First_G": {
@@ -573,7 +689,8 @@
             489
         ],
         "next": [
-            "Check_Support_Specific_Second"
+            "Check_Support_Specific_Second",
+            "End_All"
         ]
     },
     "Check_SSR_Specific_First_H": {
@@ -587,7 +704,8 @@
             489
         ],
         "next": [
-            "Check_Support_Specific_Second"
+            "Check_Support_Specific_Second",
+            "End_All"
         ]
     },
     "Check_SSR_Specific_First_I": {
@@ -601,7 +719,8 @@
             489
         ],
         "next": [
-            "Check_Support_Specific_Second"
+            "Check_Support_Specific_Second",
+            "End_All"
         ]
     },
     "Check_SSR_Specific_First_J": {
@@ -615,7 +734,8 @@
             489
         ],
         "next": [
-            "Check_Support_Specific_Second"
+            "Check_Support_Specific_Second",
+            "End_All"
         ]
     },
     "Check_SSR_Specific_First_K": {
@@ -629,7 +749,8 @@
             489
         ],
         "next": [
-            "Check_Support_Specific_Second"
+            "Check_Support_Specific_Second",
+            "End_All"
         ]
     },
     "Check_SSR_Specific_First_L": {
@@ -643,7 +764,8 @@
             489
         ],
         "next": [
-            "Check_Support_Specific_Second"
+            "Check_Support_Specific_Second",
+            "End_All"
         ]
     },
     "Check_SSR_Specific_First_M": {
@@ -657,7 +779,8 @@
             489
         ],
         "next": [
-            "Check_Support_Specific_Second"
+            "Check_Support_Specific_Second",
+            "End_All"
         ]
     },
     "Check_SSR_Specific_First_N": {
@@ -671,7 +794,8 @@
             489
         ],
         "next": [
-            "Check_Support_Specific_Second"
+            "Check_Support_Specific_Second",
+            "End_All"
         ]
     },
     "Check_SSR_Specific_First_O": {
@@ -685,7 +809,23 @@
             489
         ],
         "next": [
-            "Check_Support_Specific_Second"
+            "Check_Support_Specific_Second",
+            "End_All"
+        ]
+    },
+    "Check_SSR_Specific_First_P": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_p.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ],
+        "next": [
+            "Check_Support_Specific_Second",
+            "End_All"
         ]
     },
     "Check_Support_Specific_Second": {
@@ -706,6 +846,7 @@
             "Check_SSR_Specific_Second_M",
             "Check_SSR_Specific_Second_N",
             "Check_SSR_Specific_Second_O",
+            "Check_SSR_Specific_Second_P",
             "Open_Menu"
         ]
     },
@@ -713,6 +854,9 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_a.png",
+        "next": [
+            "End_All"
+        ],
         "roi": [
             14,
             406,
@@ -724,6 +868,9 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_b.png",
+        "next": [
+            "End_All"
+        ],
         "roi": [
             14,
             406,
@@ -735,6 +882,9 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_c.png",
+        "next": [
+            "End_All"
+        ],
         "roi": [
             14,
             406,
@@ -746,6 +896,9 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_d.png",
+        "next": [
+            "End_All"
+        ],
         "roi": [
             14,
             406,
@@ -757,6 +910,9 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_e.png",
+        "next": [
+            "End_All"
+        ],
         "roi": [
             14,
             406,
@@ -768,6 +924,9 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_f.png",
+        "next": [
+            "End_All"
+        ],
         "roi": [
             14,
             406,
@@ -779,6 +938,9 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_g.png",
+        "next": [
+            "End_All"
+        ],
         "roi": [
             14,
             406,
@@ -790,6 +952,9 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_h.png",
+        "next": [
+            "End_All"
+        ],
         "roi": [
             14,
             406,
@@ -801,6 +966,9 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_i.png",
+        "next": [
+            "End_All"
+        ],
         "roi": [
             14,
             406,
@@ -812,6 +980,9 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_j.png",
+        "next": [
+            "End_All"
+        ],
         "roi": [
             14,
             406,
@@ -823,6 +994,9 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_k.png",
+        "next": [
+            "End_All"
+        ],
         "roi": [
             14,
             406,
@@ -834,6 +1008,9 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_l.png",
+        "next": [
+            "End_All"
+        ],
         "roi": [
             14,
             406,
@@ -845,6 +1022,9 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_m.png",
+        "next": [
+            "End_All"
+        ],
         "roi": [
             14,
             406,
@@ -856,6 +1036,9 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_n.png",
+        "next": [
+            "End_All"
+        ],
         "roi": [
             14,
             406,
@@ -867,6 +1050,23 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_o.png",
+        "next": [
+            "End_All"
+        ],
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ]
+    },
+    "Check_SSR_Specific_Second_P": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_p.png",
+        "next": [
+            "End_All"
+        ],
         "roi": [
             14,
             406,
@@ -878,6 +1078,7 @@
         "recognition": "TemplateMatch",
         "template": "icon_menu.png",
         "action": "Click",
+        "post_wait_freezes": 200,
         "next": [
             "Leave_Game"
         ]
@@ -886,6 +1087,7 @@
         "recognition": "TemplateMatch",
         "template": "icon_leave_game.png",
         "action": "Click",
+        "post_wait_freezes": 200,
         "next": [
             "Confirm_Leave_Game"
         ]
@@ -898,5 +1100,6 @@
         "next": [
             "Clear_Data"
         ]
-    }
+    },
+    "End_All": {}
 }
