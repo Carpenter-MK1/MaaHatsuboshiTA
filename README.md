@@ -90,7 +90,7 @@
 
 后续再次使用工具时，可以根据需求对任务列表进行修改（Delete Task + Add Task），然后再次运行任务（Run Task）即可。
 
-## 问题反馈
+## 问题反馈 & 加入开发
 
 - **汇报问题优先使用issue功能**
 - 企鹅群：[971618596](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=2zMt_FrrG_qeW-NpJubuHsE7lRjz_UMJ&authKey=GUiDPRYCkfpxoLxhcAzbEXZCm9LnqQSJoJ6FqafpU%2BxTPGFLtD5seFrtns%2Fdwk2k&noverify=0&group_code=971618596) 
