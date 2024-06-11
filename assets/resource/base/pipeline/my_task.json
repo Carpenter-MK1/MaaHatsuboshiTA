@@ -46,6 +46,7 @@
         "next": [
             "Flag_In_Main",
             "Click_All_Button",
+            "OCR_Skip",
             "Close_Others"
         ]
     },
@@ -86,7 +87,20 @@
             332,
             15
         ],
-        "is_sub": true
+        "is_sub": true,
+        "post_delay": 10
+    },
+    "OCR_Skip": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": "SKIP",
+        "roi": [
+            146,
+            1169,
+            153,
+            63
+        ],
+        "action": "Click"
     },
     "Flag_In_Main": {
         "recognition": "TemplateMatch",
@@ -101,6 +115,36 @@
         "next": [
             "Click_All_Button",
             "open_gift"
+        ]
+    },
+    "Loop_Get_Gift": {
+        "next": [
+            "Flag_Empty_Giftbox",
+            "open_gift",
+            "Back"
+        ]
+    },
+    "Flag_Empty_Giftbox": {
+        "recognition": "ColorMatch",
+        "roi": [
+            651,
+            397,
+            47,
+            50
+        ],
+        "lower": [
+            239,
+            0,
+            67
+        ],
+        "upper": [
+            239,
+            155,
+            168
+        ],
+        "inverse": true,
+        "next": [
+            "Go_To_Gacha"
         ]
     },
     "open_gift": {
@@ -118,6 +162,10 @@
         "recognition": "TemplateMatch",
         "template": "icon_get_all_gift.png",
         "action": "Click",
+        "threshold": 0.9,
+        "timeout_next": [
+            "Loop_Goto_Home"
+        ],
         "next": [
             "close_gift_info"
         ]
@@ -126,6 +174,9 @@
         "recognition": "TemplateMatch",
         "template": "icon_close_gift_info.png",
         "action": "Click",
+        "timeout_next": [
+            "Loop_Goto_Home"
+        ],
         "next": [
             "Back_To_Main"
         ]
@@ -135,8 +186,7 @@
         "template": "icon_back_to_main.png",
         "action": "Click",
         "next": [
-            "Go_To_Gacha",
-            "Click_All_Button"
+            "Loop_Get_Gift"
         ]
     },
     "Go_To_Gacha": {
@@ -197,7 +247,33 @@
         "order_by": "Score",
         "action": "Click",
         "next": [
+            "Diamonds_Check_Normel"
+        ]
+    },
+    "Diamonds_Check_Normel": {
+        "next": [
+            "Flag_Empty_Diamond_Normel",
             "Gacha_Normel_With_Diamonds_Confirm_First"
+        ]
+    },
+    "Flag_Empty_Diamond_Normel": {
+        "recognition": "TemplateMatch",
+        "template": "icon_buy_diamonds.png",
+        "roi": [
+            335,
+            1088,
+            155,
+            146
+        ],
+        "action": "Click",
+        "target": [
+            115,
+            1132,
+            211,
+            57
+        ],
+        "next": [
+            "Go_To_Idol"
         ]
     },
     "Gacha_Normel_With_Diamonds_Confirm_First": {
@@ -219,38 +295,7 @@
         "template": "icon_leave_gacha.png",
         "action": "Click",
         "next": [
-            "Gacha_Normel_With_Diamonds_And_Leave"
-        ]
-    },
-    "Gacha_Normel_With_Diamonds_And_Leave": {
-        "recognition": "TemplateMatch",
-        "template": "icon_gacha_with_diamonds.png",
-        "order_by": "Score",
-        "action": "Click",
-        "next": [
-            "Gacha_Normel_With_Diamonds_Confirm"
-        ]
-    },
-    "Gacha_Normel_With_Diamonds_Confirm": {
-        "recognition": "TemplateMatch",
-        "template": "icon_gacha_with_diamonds_confirm.png",
-        "action": "Click",
-        "next": [
-            "End_Gacha_Normel_With_Diamonds"
-        ]
-    },
-    "End_Gacha_Normel_With_Diamonds": {
-        "next": [
-            "Leave_Gacha_Normel_With_Diamonds",
-            "Skip_Gacha"
-        ]
-    },
-    "Leave_Gacha_Normel_With_Diamonds": {
-        "recognition": "TemplateMatch",
-        "template": "icon_leave_gacha.png",
-        "action": "Click",
-        "next": [
-            "Go_To_Idol"
+            "Gacha_Normel_With_Diamonds"
         ]
     },
     "Change_Pool": {
@@ -268,31 +313,33 @@
         "action": "Click",
         "post_delay": 1000,
         "next": [
+            "Diamonds_Check_UP"
+        ]
+    },
+    "Diamonds_Check_UP": {
+        "next": [
+            "Flag_Empty_Diamond_UP",
             "Gacha_UP_With_Diamonds_Confirm"
         ]
     },
-    "Gacha_UP_Pool_Second": {
+    "Flag_Empty_Diamond_UP": {
         "recognition": "TemplateMatch",
-        "template": "icon_gacha_with_diamonds.png",
-        "order_by": "Score",
+        "template": "icon_buy_diamonds.png",
+        "roi": [
+            335,
+            1088,
+            155,
+            146
+        ],
         "action": "Click",
-        "post_delay": 1000,
+        "target": [
+            115,
+            1132,
+            211,
+            57
+        ],
         "next": [
-            "Gacha_UP_With_Diamonds_Confirm_Second"
-        ]
-    },
-    "Gacha_UP_With_Diamonds_Confirm_Second": {
-        "recognition": "TemplateMatch",
-        "template": "icon_gacha_with_diamonds_confirm.png",
-        "action": "Click",
-        "next": [
-            "End_Gacha_UP_With_Diamonds_Second"
-        ]
-    },
-    "End_Gacha_UP_With_Diamonds_Second": {
-        "next": [
-            "Leave_Gacha_UP_With_Diamonds",
-            "Skip_Gacha"
+            "Change_Pool_And_Gacha_Normel"
         ]
     },
     "Gacha_UP_With_Diamonds_Confirm": {
@@ -305,16 +352,8 @@
     },
     "End_Gacha_UP_With_Diamonds": {
         "next": [
-            "Leave_Gacha_UP_With_Diamonds_First",
+            "Leave_Gacha_UP_With_Diamonds",
             "Skip_Gacha"
-        ]
-    },
-    "Leave_Gacha_UP_With_Diamonds_First": {
-        "recognition": "TemplateMatch",
-        "template": "icon_leave_gacha.png",
-        "action": "Click",
-        "next": [
-            "Gacha_UP_Pool_Second"
         ]
     },
     "Leave_Gacha_UP_With_Diamonds": {
@@ -322,7 +361,7 @@
         "template": "icon_leave_gacha.png",
         "action": "Click",
         "next": [
-            "Change_Pool_And_Gacha_Normel"
+            "Gacha_UP_Pool"
         ]
     },
     "Change_Pool_And_Gacha_Normel": {
@@ -358,6 +397,7 @@
         "recognition": "TemplateMatch",
         "template": "icon_support_storage.png",
         "action": "Click",
+        "post_wait_freezes": 200,
         "next": [
             "Check_Support_Amount"
         ]
@@ -1100,6 +1140,10 @@
         "next": [
             "Clear_Data"
         ]
+    },
+    "Back": {
+        "action": "Key",
+        "key": 4
     },
     "End_All": {}
 }

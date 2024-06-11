@@ -1,0 +1,10 @@
+{
+    "Start_App_Gakumas": {
+        "action": "StartApp",
+        "package": "com.bandainamcoent.idolmaster_gakuen/com.google.firebase.MessagingUnityPlayerActivity"
+    },
+    "End_App_Gakumas": {
+        "action": "StopApp",
+        "package": "com.bandainamcoent.idolmaster_gakuen"
+    }
+}

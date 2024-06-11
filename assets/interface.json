@@ -35,7 +35,7 @@
         "抽什么池 | Which Pool": {
             "cases": [
                 {
-                    "name": "UP池20连+普池20连 | 20UP+20Normel",
+                    "name": "UP池+普池 | UP+Normel",
                     "param": {
                         "Gacha_UP_Pool": {
                             "enabled": true
@@ -43,7 +43,7 @@
                     }
                 },
                 {
-                    "name": "全部抽普池40连 | 40Normel",
+                    "name": "全部抽普池 | All In Normel",
                     "param": {
                         "Gacha_Normel_Pool": {
                             "enabled": true

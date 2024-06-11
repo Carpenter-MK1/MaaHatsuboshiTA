@@ -40,5 +40,59 @@
         "recognition": "TemplateMatch",
         "template": "flag_in_choose_idol.png",
         "action": "Click"
+    },
+    "test_card_detect": {
+        "is_sub": true,
+        "recognition": "ColorMatch",
+        "roi": [
+            4,
+            1135,
+            716,
+            3
+        ],
+        "upper": [
+            255,
+            237,
+            190
+        ],
+        "lower": [
+            211,
+            185,
+            81
+        ],
+        "count": 100,
+        "order_by": "Score",
+        "connected": true,
+        "post_delay": 10,
+        "action": "Click",
+        "target_offset": [
+            0,
+            -40,
+            0,
+            0
+        ],
+        "next": [
+            "Click_Again"
+        ]
+    },
+    "Click_Again": {
+        "action": "Click",
+        "target": "test_card_detect",
+        "target_offset": [
+            0,
+            -40,
+            0,
+            0
+        ],
+        "post_delay": 7000
+    },
+    "Loop_Sub": {
+        "is_sub": true
+    },
+    "Loop_Lesson": {
+        "next": [
+            "test_card_detect",
+            "Loop_Sub"
+        ]
     }
 }
