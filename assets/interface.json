@@ -111,7 +111,29 @@
                     "param": {}
                 },
                 {
-                    "name": "【NEW!】不要再贴过来啦！（まだ上がりませんように!）",
+                    "name": "【NEW!】不是“a”是“e”!（「ア」じゃなくて「エ」！）",
+                    "param": {
+                        "Check_SSR_Specific_First_R": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_First": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Da&奶】放晴了呢（晴れたね）",
+                    "param": {
+                        "Check_SSR_Specific_First_Q": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_First": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Vo&多动】不要再贴过来啦！（まだ上がりませんように!）",
                     "param": {
                         "Check_SSR_Specific_First_P": {
                             "enabled": true
@@ -295,7 +317,29 @@
                     "param": {}
                 },
                 {
-                    "name": "【NEW!】不要再贴过来啦！（まだ上がりませんように!）",
+                    "name": "【NEW!】不是“a”是“e”!（「ア」じゃなくて「エ」！）",
+                    "param": {
+                        "Check_SSR_Specific_Second_R": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_Second": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Da&奶】放晴了呢（晴れたね）",
+                    "param": {
+                        "Check_SSR_Specific_Second_Q": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_Second": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Vo&多动】不要再贴过来啦！（まだ上がりませんように!）",
                     "param": {
                         "Check_SSR_Specific_Second_P": {
                             "enabled": true

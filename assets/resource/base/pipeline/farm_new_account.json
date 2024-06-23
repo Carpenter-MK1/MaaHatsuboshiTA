@@ -433,7 +433,8 @@
             "card/card_ssr_m.png",
             "card/card_ssr_n.png",
             "card/card_ssr_o.png",
-            "card/card_ssr_p.png"
+            "card/card_ssr_p.png",
+            "card/card_ssr_q.png"
         ],
         "roi": [
             469,
@@ -465,7 +466,8 @@
             "card/card_ssr_m.png",
             "card/card_ssr_n.png",
             "card/card_ssr_o.png",
-            "card/card_ssr_p.png"
+            "card/card_ssr_p.png",
+            "card/card_ssr_q.png"
         ],
         "roi": [
             253,
@@ -497,7 +499,8 @@
             "card/card_ssr_m.png",
             "card/card_ssr_n.png",
             "card/card_ssr_o.png",
-            "card/card_ssr_p.png"
+            "card/card_ssr_p.png",
+            "card/card_ssr_q.png"
         ],
         "roi": [
             34,
@@ -529,7 +532,8 @@
             "card/card_ssr_m.png",
             "card/card_ssr_n.png",
             "card/card_ssr_o.png",
-            "card/card_ssr_p.png"
+            "card/card_ssr_p.png",
+            "card/card_ssr_q.png"
         ],
         "roi": [
             475,
@@ -561,7 +565,9 @@
             "card/card_ssr_m.png",
             "card/card_ssr_n.png",
             "card/card_ssr_o.png",
-            "card/card_ssr_p.png"
+            "card/card_ssr_p.png",
+            "card/card_ssr_q.png",
+            "card/card_ssr_r.png"
         ],
         "roi": [
             252,
@@ -593,7 +599,9 @@
             "card/card_ssr_m.png",
             "card/card_ssr_n.png",
             "card/card_ssr_o.png",
-            "card/card_ssr_p.png"
+            "card/card_ssr_p.png",
+            "card/card_ssr_q.png",
+            "card/card_ssr_r.png"
         ],
         "roi": [
             36,
@@ -625,6 +633,8 @@
             "Check_SSR_Specific_First_N",
             "Check_SSR_Specific_First_O",
             "Check_SSR_Specific_First_P",
+            "Check_SSR_Specific_First_Q",
+            "Check_SSR_Specific_First_R",
             "Open_Menu"
         ]
     },
@@ -868,6 +878,36 @@
             "End_All"
         ]
     },
+    "Check_SSR_Specific_First_Q": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_q.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ],
+        "next": [
+            "Check_Support_Specific_Second",
+            "End_All"
+        ]
+    },
+    "Check_SSR_Specific_First_R": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_r.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ],
+        "next": [
+            "Check_Support_Specific_Second",
+            "End_All"
+        ]
+    },
     "Check_Support_Specific_Second": {
         "enabled": false,
         "next": [
@@ -887,6 +927,8 @@
             "Check_SSR_Specific_Second_N",
             "Check_SSR_Specific_Second_O",
             "Check_SSR_Specific_Second_P",
+            "Check_SSR_Specific_Second_Q",
+            "Check_SSR_Specific_Second_R",
             "Open_Menu"
         ]
     },
@@ -1104,6 +1146,34 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_p.png",
+        "next": [
+            "End_All"
+        ],
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ]
+    },
+    "Check_SSR_Specific_Second_Q": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_q.png",
+        "next": [
+            "End_All"
+        ],
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ]
+    },
+    "Check_SSR_Specific_Second_R": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_r.png",
         "next": [
             "End_All"
         ],
