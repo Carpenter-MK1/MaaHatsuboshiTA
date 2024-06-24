@@ -11,10 +11,10 @@
         "recognition": "TemplateMatch",
         "template": "text_contest.png",
         "roi": [
-            279,
-            814,
-            273,
-            143
+            448,
+            860,
+            181,
+            49
         ],
         "action": "Click",
         "next": [
