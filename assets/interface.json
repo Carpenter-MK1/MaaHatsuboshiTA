@@ -111,7 +111,18 @@
                     "param": {}
                 },
                 {
-                    "name": "【NEW!】不是“a”是“e”!（「ア」じゃなくて「エ」！）",
+                    "name": "<NEW>【Da&干劲】真是的！很冷的啦！（もうっ！冷たいよ！",
+                    "param": {
+                        "Check_SSR_Specific_First_S": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_First": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Vi&叠毒】不是“a”是“e”!（「ア」じゃなくて「エ」！）",
                     "param": {
                         "Check_SSR_Specific_First_R": {
                             "enabled": true
@@ -317,7 +328,18 @@
                     "param": {}
                 },
                 {
-                    "name": "【NEW!】不是“a”是“e”!（「ア」じゃなくて「エ」！）",
+                    "name": "<NEW>【Da&干劲】真是的！很冷的啦！（もうっ！冷たいよ！）",
+                    "param": {
+                        "Check_SSR_Specific_Second_S": {
+                            "enabled": true
+                        },
+                        "Check_Support_Specific_Second": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Vi&叠毒】不是“a”是“e”!（「ア」じゃなくて「エ」！）",
                     "param": {
                         "Check_SSR_Specific_Second_R": {
                             "enabled": true

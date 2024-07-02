@@ -206,7 +206,23 @@
     "Gacha_Normel_Pool": {
         "enabled": false,
         "next": [
-            "Change_Pool",
+            "Flag_In_Normel_Pool",
+            "Change_Pool"
+        ]
+    },
+    "Flag_In_Normel_Pool": {
+        "recognition": "TemplateMatch",
+        "template": "icon_normel_pool.png",
+        "roi": [
+            166,
+            629,
+            262,
+            186
+        ],
+        "next": "Gacha_Normel_Pool_Loop"
+    },
+    "Gacha_Normel_Pool_Loop": {
+        "next": [
             "Gacha_With_Tickets",
             "Gacha_Normel_With_Diamonds"
         ]
@@ -301,7 +317,10 @@
     "Change_Pool": {
         "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "icon_change_pool.png",
+        "template": [
+            "icon_change_pool.png",
+            "icon_change_pool_48sp.png"
+        ],
         "post_delay": 1500,
         "action": "Click"
     },
@@ -339,7 +358,7 @@
             57
         ],
         "next": [
-            "Change_Pool_And_Gacha_Normel"
+            "Change_Pool_From_UP_To_48SP"
         ]
     },
     "Gacha_UP_With_Diamonds_Confirm": {
@@ -364,11 +383,25 @@
             "Gacha_UP_Pool"
         ]
     },
-    "Change_Pool_And_Gacha_Normel": {
+    "Change_Pool_From_UP_To_48SP": {
+        "recognition": "TemplateMatch",
+        "template": "icon_change_pool_48sp.png",
+        "post_delay": 1500,
+        "action": "Click",
+        "next": [
+            "Change_Pool_From_48SP_To_Normel"
+        ]
+    },
+    "Change_Pool_From_48SP_To_Normel": {
         "recognition": "TemplateMatch",
         "template": "icon_change_pool.png",
         "post_delay": 1500,
         "action": "Click",
+        "next": [
+            "Gacha_Normel"
+        ]
+    },
+    "Gacha_Normel": {
         "next": [
             "Gacha_With_Tickets",
             "Go_To_Idol"
@@ -434,7 +467,8 @@
             "card/card_ssr_n.png",
             "card/card_ssr_o.png",
             "card/card_ssr_p.png",
-            "card/card_ssr_q.png"
+            "card/card_ssr_q.png",
+            "card/card_ssr_s.png"
         ],
         "roi": [
             469,
@@ -467,7 +501,8 @@
             "card/card_ssr_n.png",
             "card/card_ssr_o.png",
             "card/card_ssr_p.png",
-            "card/card_ssr_q.png"
+            "card/card_ssr_q.png",
+            "card/card_ssr_s.png"
         ],
         "roi": [
             253,
@@ -500,7 +535,8 @@
             "card/card_ssr_n.png",
             "card/card_ssr_o.png",
             "card/card_ssr_p.png",
-            "card/card_ssr_q.png"
+            "card/card_ssr_q.png",
+            "card/card_ssr_s.png"
         ],
         "roi": [
             34,
@@ -533,7 +569,9 @@
             "card/card_ssr_n.png",
             "card/card_ssr_o.png",
             "card/card_ssr_p.png",
-            "card/card_ssr_q.png"
+            "card/card_ssr_q.png",
+            "card/card_ssr_r.png",
+            "card/card_ssr_s.png"
         ],
         "roi": [
             475,
@@ -567,7 +605,8 @@
             "card/card_ssr_o.png",
             "card/card_ssr_p.png",
             "card/card_ssr_q.png",
-            "card/card_ssr_r.png"
+            "card/card_ssr_r.png",
+            "card/card_ssr_s.png"
         ],
         "roi": [
             252,
@@ -601,7 +640,8 @@
             "card/card_ssr_o.png",
             "card/card_ssr_p.png",
             "card/card_ssr_q.png",
-            "card/card_ssr_r.png"
+            "card/card_ssr_r.png",
+            "card/card_ssr_s.png"
         ],
         "roi": [
             36,
@@ -635,6 +675,7 @@
             "Check_SSR_Specific_First_P",
             "Check_SSR_Specific_First_Q",
             "Check_SSR_Specific_First_R",
+            "Check_SSR_Specific_First_S",
             "Open_Menu"
         ]
     },
@@ -908,6 +949,21 @@
             "End_All"
         ]
     },
+    "Check_SSR_Specific_First_S": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_s.png",
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ],
+        "next": [
+            "Check_Support_Specific_Second",
+            "End_All"
+        ]
+    },
     "Check_Support_Specific_Second": {
         "enabled": false,
         "next": [
@@ -929,6 +985,7 @@
             "Check_SSR_Specific_Second_P",
             "Check_SSR_Specific_Second_Q",
             "Check_SSR_Specific_Second_R",
+            "Check_SSR_Specific_Second_S",
             "Open_Menu"
         ]
     },
@@ -1174,6 +1231,20 @@
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "card/card_ssr_r.png",
+        "next": [
+            "End_All"
+        ],
+        "roi": [
+            14,
+            406,
+            690,
+            489
+        ]
+    },
+    "Check_SSR_Specific_Second_S": {
+        "enabled": false,
+        "recognition": "TemplateMatch",
+        "template": "card/card_ssr_s.png",
         "next": [
             "End_All"
         ],
