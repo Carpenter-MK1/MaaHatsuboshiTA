@@ -35,9 +35,6 @@
 * 智能竞技场
 * 智能P卡
 
-> [!NOTE]  
-> 由于开服赠送十连活动将在六月末结束，届时刷初始将变得非常没有性价比（相较于买初始号），因此刷初始相关功能暂时不考虑进一步开发，敬请谅解。
-
 ## 安装说明
 
 ### Windows
@@ -94,6 +91,14 @@
 
 - **汇报问题优先使用issue功能**
 - 企鹅群：[971618596](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=2zMt_FrrG_qeW-NpJubuHsE7lRjz_UMJ&authKey=GUiDPRYCkfpxoLxhcAzbEXZCm9LnqQSJoJ6FqafpU%2BxTPGFLtD5seFrtns%2Fdwk2k&noverify=0&group_code=971618596) 
+
+> [!NOTE]
+> **协助更新**
+> 
+> 游戏更新了新卡但是初始号筛选里却没有？由于MAA框架的图像识别原理，需要来自模拟器的**无损原图**进行识别，所以没有更新意味着霉逼作者还没有抽到新卡。如果您抽到了没有收录的支援卡，可以使用模拟器自带的截图功能截取带有该卡的**支援卡仓库**界面（无所谓卡片等级），然后将图片放入 ./assets/resource/base/image 中，提交PR。您也可以加入QQ群上传图片然后@群主收货。
+
+
+
 
 ## 声明
 
