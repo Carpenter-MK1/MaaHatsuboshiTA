@@ -10,12 +10,6 @@
     "Enter_Contest_Page": {
         "recognition": "TemplateMatch",
         "template": "text_contest.png",
-        "roi": [
-            448,
-            860,
-            181,
-            49
-        ],
         "action": "Click",
         "next": [
             "Loop_Enter_Contest_Battle"
