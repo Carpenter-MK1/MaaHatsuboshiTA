@@ -26,12 +26,58 @@
         },
         {
             "name": "弱智竞技场（开始前将游戏切换至Home页）| Auto Contest (To Home Page First)",
-            "entry": "Main_To_Contest"
+            "entry": "Main_To_Contest",
+            "option": [
+                "打几号位 | Which Target"
+            ]
         }
     ],
     "recognizer": {},
     "action": {},
     "option": {
+        "打几号位 | Which Target": {
+            "cases": [
+                {
+                    "name": "1号位（上） | No.1 (UP)",
+                    "param": {
+                        "Contest_Enemy_Choose": {
+                            "roi": [
+                                36,
+                                420,
+                                209,
+                                84
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "2号位（中） | No.2 (Mid)",
+                    "param": {
+                        "Contest_Enemy_Choose": {
+                            "roi": [
+                                36,
+                                420,
+                                209,
+                                84
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "3号位（下） | No.3 (Down)",
+                    "param": {
+                        "Contest_Enemy_Choose": {
+                            "roi": [
+                                36,
+                                420,
+                                209,
+                                84
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
         "抽什么池 | Which Pool": {
             "cases": [
                 {
@@ -57,48 +103,78 @@
                 {
                     "name": "1张",
                     "param": {
-                        "Check_SSR_1": {
-                            "enabled": true
+                        "Check_SSR_Amount": {
+                            "roi": [
+                                36,
+                                420,
+                                209,
+                                84
+                            ]
                         }
                     }
                 },
                 {
                     "name": "2张",
                     "param": {
-                        "Check_SSR_2": {
-                            "enabled": true
+                        "Check_SSR_Amount": {
+                            "roi": [
+                                252,
+                                421,
+                                215,
+                                67
+                            ]
                         }
                     }
                 },
                 {
                     "name": "3张",
                     "param": {
-                        "Check_SSR_3": {
-                            "enabled": true
+                        "Check_SSR_Amount": {
+                            "roi": [
+                                475,
+                                420,
+                                214,
+                                64
+                            ]
                         }
                     }
                 },
                 {
                     "name": "4张",
                     "param": {
-                        "Check_SSR_4": {
-                            "enabled": true
+                        "Check_SSR_Amount": {
+                            "roi": [
+                                34,
+                                549,
+                                210,
+                                66
+                            ]
                         }
                     }
                 },
                 {
                     "name": "5张",
                     "param": {
-                        "Check_SSR_5": {
-                            "enabled": true
+                        "Check_SSR_Amount": {
+                            "roi": [
+                                253,
+                                548,
+                                215,
+                                67
+                            ]
                         }
                     }
                 },
                 {
                     "name": "6张(幻想时间)",
                     "param": {
-                        "Check_SSR_6": {
-                            "enabled": true
+                        "Check_SSR_Amount": {
+                            "roi": [
+                                469,
+                                539,
+                                230,
+                                138
+                            ]
                         }
                     }
                 }
@@ -111,10 +187,21 @@
                     "param": {}
                 },
                 {
-                    "name": "<NEW>【Da&干劲】真是的！很冷的啦！（もうっ！冷たいよ！）",
+                    "name": "<NEW!>【Vo&大刀】暂时休战（一時休戦です）",
                     "param": {
-                        "Check_SSR_Specific_First_S": {
+                        "Check_SSR_Specific_First": {
+                            "template": "card/card_ssr_t.png"
+                        },
+                        "Check_Support_Specific_First": {
                             "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Da&干劲】真是的！很冷的啦！（もうっ！冷たいよ！）",
+                    "param": {
+                        "Check_SSR_Specific_First": {
+                            "template": "card/card_ssr_s.png"
                         },
                         "Check_Support_Specific_First": {
                             "enabled": true
@@ -124,8 +211,8 @@
                 {
                     "name": "【Vi&叠毒】不是“a”是“e”!（「ア」じゃなくて「エ」！）",
                     "param": {
-                        "Check_SSR_Specific_First_R": {
-                            "enabled": true
+                        "Check_SSR_Specific_First": {
+                            "template": "card/card_ssr_r.png"
                         },
                         "Check_Support_Specific_First": {
                             "enabled": true
@@ -135,8 +222,8 @@
                 {
                     "name": "【Da&奶】放晴了呢（晴れたね）",
                     "param": {
-                        "Check_SSR_Specific_First_Q": {
-                            "enabled": true
+                        "Check_SSR_Specific_First": {
+                            "template": "card/card_ssr_q.png"
                         },
                         "Check_Support_Specific_First": {
                             "enabled": true
@@ -146,8 +233,8 @@
                 {
                     "name": "【Vo&多动】不要再贴过来啦！（まだ上がりませんように!）",
                     "param": {
-                        "Check_SSR_Specific_First_P": {
-                            "enabled": true
+                        "Check_SSR_Specific_First": {
+                            "template": "card/card_ssr_p.png"
                         },
                         "Check_Support_Specific_First": {
                             "enabled": true
@@ -157,8 +244,8 @@
                 {
                     "name": "【Vo&多动】她在干什么呢...（何やってるんだろう...）",
                     "param": {
-                        "Check_SSR_Specific_First_A": {
-                            "enabled": true
+                        "Check_SSR_Specific_First": {
+                            "template": "card/card_ssr_a.png"
                         },
                         "Check_Support_Specific_First": {
                             "enabled": true
@@ -168,8 +255,8 @@
                 {
                     "name": "【体&奶】你是令人骄傲的学生（きみは、自慢の生徒です）",
                     "param": {
-                        "Check_SSR_Specific_First_B": {
-                            "enabled": true
+                        "Check_SSR_Specific_First": {
+                            "template": "card/card_ssr_b.png"
                         },
                         "Check_Support_Specific_First": {
                             "enabled": true
@@ -179,8 +266,8 @@
                 {
                     "name": "【Vi&强化】也给你做了一份（あなたにも作ってあげる）",
                     "param": {
-                        "Check_SSR_Specific_First_C": {
-                            "enabled": true
+                        "Check_SSR_Specific_First": {
+                            "template": "card/card_ssr_c.png"
                         },
                         "Check_Support_Specific_First": {
                             "enabled": true
@@ -190,8 +277,8 @@
                 {
                     "name": "【Vi&奶】交给姐姐吧！（お姉ちゃんに任せなさい！）",
                     "param": {
-                        "Check_SSR_Specific_First_D": {
-                            "enabled": true
+                        "Check_SSR_Specific_First": {
+                            "template": "card/card_ssr_d.png"
                         },
                         "Check_Support_Specific_First": {
                             "enabled": true
@@ -201,8 +288,8 @@
                 {
                     "name": "【Da&强化】我不服啊……！（ぐぬぬぬぬ……！）",
                     "param": {
-                        "Check_SSR_Specific_First_E": {
-                            "enabled": true
+                        "Check_SSR_Specific_First": {
+                            "template": "card/card_ssr_e.png"
                         },
                         "Check_Support_Specific_First": {
                             "enabled": true
@@ -212,8 +299,8 @@
                 {
                     "name": "【Da&奶】辛苦了，千奈同学（お疲れ様、千奈ちゃん）",
                     "param": {
-                        "Check_SSR_Specific_First_F": {
-                            "enabled": true
+                        "Check_SSR_Specific_First": {
+                            "template": "card/card_ssr_f.png"
                         },
                         "Check_Support_Specific_First": {
                             "enabled": true
@@ -223,8 +310,8 @@
                 {
                     "name": "【ViSP&加盾】就像王子一样（まるで王子様みたいな）",
                     "param": {
-                        "Check_SSR_Specific_First_G": {
-                            "enabled": true
+                        "Check_SSR_Specific_First": {
+                            "template": "card/card_ssr_g.png"
                         },
                         "Check_Support_Specific_First": {
                             "enabled": true
@@ -234,8 +321,8 @@
                 {
                     "name": "【DaSP&多功能】看起来好好吃，我开动了～！（おいしい顔、いただき～！）",
                     "param": {
-                        "Check_SSR_Specific_First_H": {
-                            "enabled": true
+                        "Check_SSR_Specific_First": {
+                            "template": "card/card_ssr_h.png"
                         },
                         "Check_Support_Specific_First": {
                             "enabled": true
@@ -245,8 +332,8 @@
                 {
                     "name": "【VoSP&手牌强化】可爱可爱超可爱！（可愛いと可愛いで可愛い！）",
                     "param": {
-                        "Check_SSR_Specific_First_I": {
-                            "enabled": true
+                        "Check_SSR_Specific_First": {
+                            "template": "card/card_ssr_i.png"
                         },
                         "Check_Support_Specific_First": {
                             "enabled": true
@@ -256,8 +343,8 @@
                 {
                     "name": "【Vi奶&多动】我绝不会看走眼（私の目に狂いはない）",
                     "param": {
-                        "Check_SSR_Specific_First_J": {
-                            "enabled": true
+                        "Check_SSR_Specific_First": {
+                            "template": "card/card_ssr_j.png"
                         },
                         "Check_Support_Specific_First": {
                             "enabled": true
@@ -267,8 +354,8 @@
                 {
                     "name": "【Vo奶&奶】又那样勉强自己（また、あんなに無理をして）",
                     "param": {
-                        "Check_SSR_Specific_First_K": {
-                            "enabled": true
+                        "Check_SSR_Specific_First": {
+                            "template": "card/card_ssr_k.png"
                         },
                         "Check_Support_Specific_First": {
                             "enabled": true
@@ -278,8 +365,8 @@
                 {
                     "name": "【Vo&加盾加抽】哎呀，真巧啊（あら、奇遇ね）",
                     "param": {
-                        "Check_SSR_Specific_First_L": {
-                            "enabled": true
+                        "Check_SSR_Specific_First": {
+                            "template": "card/card_ssr_l.png"
                         },
                         "Check_Support_Specific_First": {
                             "enabled": true
@@ -289,8 +376,8 @@
                 {
                     "name": "【Da&减费】这是真的吗（まじか。）",
                     "param": {
-                        "Check_SSR_Specific_First_M": {
-                            "enabled": true
+                        "Check_SSR_Specific_First": {
+                            "template": "card/card_ssr_m.png"
                         },
                         "Check_Support_Specific_First": {
                             "enabled": true
@@ -300,8 +387,8 @@
                 {
                     "name": "【Da&多动】来，我们一起搬吧♪（ほら、一緒に持と♪）",
                     "param": {
-                        "Check_SSR_Specific_First_N": {
-                            "enabled": true
+                        "Check_SSR_Specific_First": {
+                            "template": "card/card_ssr_n.png"
                         },
                         "Check_Support_Specific_First": {
                             "enabled": true
@@ -311,8 +398,8 @@
                 {
                     "name": "【Vo&印卡】下一个樱花盛开的季节（次の桜の季節には）",
                     "param": {
-                        "Check_SSR_Specific_First_O": {
-                            "enabled": true
+                        "Check_SSR_Specific_First": {
+                            "template": "card/card_ssr_o.png"
                         },
                         "Check_Support_Specific_First": {
                             "enabled": true
@@ -328,10 +415,21 @@
                     "param": {}
                 },
                 {
-                    "name": "<NEW>【Da&干劲】真是的！很冷的啦！（もうっ！冷たいよ！）",
+                    "name": "<NEW!>【Vo&大刀】暂时休战（一時休戦です）",
                     "param": {
-                        "Check_SSR_Specific_Second_S": {
+                        "Check_SSR_Specific_Second": {
+                            "template": "card/card_ssr_t.png"
+                        },
+                        "Check_Support_Specific_Second": {
                             "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "【Da&干劲】真是的！很冷的啦！（もうっ！冷たいよ！）",
+                    "param": {
+                        "Check_SSR_Specific_Second": {
+                            "template": "card/card_ssr_s.png"
                         },
                         "Check_Support_Specific_Second": {
                             "enabled": true
@@ -341,8 +439,8 @@
                 {
                     "name": "【Vi&叠毒】不是“a”是“e”!（「ア」じゃなくて「エ」！）",
                     "param": {
-                        "Check_SSR_Specific_Second_R": {
-                            "enabled": true
+                        "Check_SSR_Specific_Second": {
+                            "template": "card/card_ssr_r.png"
                         },
                         "Check_Support_Specific_Second": {
                             "enabled": true
@@ -352,8 +450,8 @@
                 {
                     "name": "【Da&奶】放晴了呢（晴れたね）",
                     "param": {
-                        "Check_SSR_Specific_Second_Q": {
-                            "enabled": true
+                        "Check_SSR_Specific_Second": {
+                            "template": "card/card_ssr_q.png"
                         },
                         "Check_Support_Specific_Second": {
                             "enabled": true
@@ -363,8 +461,8 @@
                 {
                     "name": "【Vo&多动】不要再贴过来啦！（まだ上がりませんように!）",
                     "param": {
-                        "Check_SSR_Specific_Second_P": {
-                            "enabled": true
+                        "Check_SSR_Specific_Second": {
+                            "template": "card/card_ssr_p.png"
                         },
                         "Check_Support_Specific_Second": {
                             "enabled": true
@@ -374,8 +472,8 @@
                 {
                     "name": "【Vo&多动】她在干什么呢...（何やってるんだろう...）",
                     "param": {
-                        "Check_SSR_Specific_Second_A": {
-                            "enabled": true
+                        "Check_SSR_Specific_Second": {
+                            "template": "card/card_ssr_a.png"
                         },
                         "Check_Support_Specific_Second": {
                             "enabled": true
@@ -385,8 +483,8 @@
                 {
                     "name": "【体&奶】你是令人骄傲的学生（きみは、自慢の生徒です）",
                     "param": {
-                        "Check_SSR_Specific_Second_B": {
-                            "enabled": true
+                        "Check_SSR_Specific_Second": {
+                            "template": "card/card_ssr_b.png"
                         },
                         "Check_Support_Specific_Second": {
                             "enabled": true
@@ -396,8 +494,8 @@
                 {
                     "name": "【Vi&强化】也给你做了一份（あなたにも作ってあげる）",
                     "param": {
-                        "Check_SSR_Specific_Second_C": {
-                            "enabled": true
+                        "Check_SSR_Specific_Second": {
+                            "template": "card/card_ssr_c.png"
                         },
                         "Check_Support_Specific_Second": {
                             "enabled": true
@@ -407,8 +505,8 @@
                 {
                     "name": "【Vi&奶】交给姐姐吧！（お姉ちゃんに任せなさい！）",
                     "param": {
-                        "Check_SSR_Specific_Second_D": {
-                            "enabled": true
+                        "Check_SSR_Specific_Second": {
+                            "template": "card/card_ssr_d.png"
                         },
                         "Check_Support_Specific_Second": {
                             "enabled": true
@@ -418,8 +516,8 @@
                 {
                     "name": "【Da&强化】我不服啊……！（ぐぬぬぬぬ……！）",
                     "param": {
-                        "Check_SSR_Specific_Second_E": {
-                            "enabled": true
+                        "Check_SSR_Specific_Second": {
+                            "template": "card/card_ssr_e.png"
                         },
                         "Check_Support_Specific_Second": {
                             "enabled": true
@@ -429,8 +527,8 @@
                 {
                     "name": "【Da&奶】辛苦了，千奈同学（お疲れ様、千奈ちゃん）",
                     "param": {
-                        "Check_SSR_Specific_Second_F": {
-                            "enabled": true
+                        "Check_SSR_Specific_Second": {
+                            "template": "card/card_ssr_f.png"
                         },
                         "Check_Support_Specific_Second": {
                             "enabled": true
@@ -440,8 +538,8 @@
                 {
                     "name": "【ViSP&加盾】就像王子一样（まるで王子様みたいな）",
                     "param": {
-                        "Check_SSR_Specific_Second_G": {
-                            "enabled": true
+                        "Check_SSR_Specific_Second": {
+                            "template": "card/card_ssr_g.png"
                         },
                         "Check_Support_Specific_Second": {
                             "enabled": true
@@ -451,8 +549,8 @@
                 {
                     "name": "【DaSP&多功能】看起来好好吃，我开动了～！（おいしい顔、いただき～！）",
                     "param": {
-                        "Check_SSR_Specific_Second_H": {
-                            "enabled": true
+                        "Check_SSR_Specific_Second": {
+                            "template": "card/card_ssr_h.png"
                         },
                         "Check_Support_Specific_Second": {
                             "enabled": true
@@ -462,8 +560,8 @@
                 {
                     "name": "【VoSP&手牌强化】可爱可爱超可爱！（可愛いと可愛いで可愛い！）",
                     "param": {
-                        "Check_SSR_Specific_Second_I": {
-                            "enabled": true
+                        "Check_SSR_Specific_Second": {
+                            "template": "card/card_ssr_i.png"
                         },
                         "Check_Support_Specific_Second": {
                             "enabled": true
@@ -473,8 +571,8 @@
                 {
                     "name": "【Vi奶&多动】我绝不会看走眼（私の目に狂いはない）",
                     "param": {
-                        "Check_SSR_Specific_Second_J": {
-                            "enabled": true
+                        "Check_SSR_Specific_Second": {
+                            "template": "card/card_ssr_j.png"
                         },
                         "Check_Support_Specific_Second": {
                             "enabled": true
@@ -484,8 +582,8 @@
                 {
                     "name": "【Vo奶&奶】又那样勉强自己（また、あんなに無理をして）",
                     "param": {
-                        "Check_SSR_Specific_Second_K": {
-                            "enabled": true
+                        "Check_SSR_Specific_Second": {
+                            "template": "card/card_ssr_k.png"
                         },
                         "Check_Support_Specific_Second": {
                             "enabled": true
@@ -495,8 +593,8 @@
                 {
                     "name": "【Vo&加盾加抽】哎呀，真巧啊（あら、奇遇ね）",
                     "param": {
-                        "Check_SSR_Specific_Second_L": {
-                            "enabled": true
+                        "Check_SSR_Specific_Second": {
+                            "template": "card/card_ssr_l.png"
                         },
                         "Check_Support_Specific_Second": {
                             "enabled": true
@@ -506,8 +604,8 @@
                 {
                     "name": "【Da&减费】这是真的吗（まじか。）",
                     "param": {
-                        "Check_SSR_Specific_Second_M": {
-                            "enabled": true
+                        "Check_SSR_Specific_Second": {
+                            "template": "card/card_ssr_m.png"
                         },
                         "Check_Support_Specific_Second": {
                             "enabled": true
@@ -517,8 +615,8 @@
                 {
                     "name": "【Da&多动】来，我们一起搬吧♪（ほら、一緒に持と♪）",
                     "param": {
-                        "Check_SSR_Specific_Second_N": {
-                            "enabled": true
+                        "Check_SSR_Specific_Second": {
+                            "template": "card/card_ssr_n.png"
                         },
                         "Check_Support_Specific_Second": {
                             "enabled": true
@@ -528,8 +626,8 @@
                 {
                     "name": "【Vo&印卡】下一个樱花盛开的季节（次の桜の季節には）",
                     "param": {
-                        "Check_SSR_Specific_Second_O": {
-                            "enabled": true
+                        "Check_SSR_Specific_Second": {
+                            "template": "card/card_ssr_o.png"
                         },
                         "Check_Support_Specific_Second": {
                             "enabled": true
