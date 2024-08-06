@@ -1,7 +1,7 @@
 {
     "Daily_Begin": {
         "next": "活動費_Collect",
-        "_doc": ["自动清日常"]
+        "_doc": "自动清日常"
     },
     "活動費_Collect": {
         "action": "Click",
@@ -29,7 +29,7 @@
         "lower": [254, 17, 72],
         "upper": [255, 19, 74],
         "action": "Click",
-        "Target": [70, 680, 1, 1],
+        "target": [70, 680, 1, 1],
         "next": [
             "お仕事_Done_FLAG",
             "お仕事_Finish_Previous",
