@@ -1,23 +1,27 @@
 {
     "Daily_Begin": {
         "next": "活動費_Collect",
-        "_doc": ["自动清日常。TODO：1. 选择お仕事角色时，如果咲季正在工作，选择默认位置时或许会出错，需要测试 2. 如果社团有别人送的礼物，进社团时可能会卡住（因为忘截图了不记得收礼页面有什么。明天要记得截图）"]
+        "_doc": ["自动清日常"]
     },
     "活動費_Collect": {
         "action": "Click",
         "target": [70, 560, 1, 1],
-        "next": "活動費_Wait_Popup"
-    },
-    "活動費_Wait_Popup": {
-        "recognition": "OCR",
-        "expected": "保管上限",
         "next": "活動費_Close"
     },
     "活動費_Close": {
         "recognition": "OCR",
         "expected": "閉じる",
         "action": "Click",
-        "next": "お仕事_Open"
+        "next": "活動費_Closed_Wait"
+    },
+    "活動費_Closed_Wait": {
+        "recognition": "OCR",
+        "roi": [25, 600, 88, 35],
+        "expected": "活動費",
+        "next": [
+            "お仕事_Open",
+            "寄付_Open_Main_Menu"
+        ]
     },
     "お仕事_Open": {
         "recognition": "ColorMatch",
@@ -66,7 +70,7 @@
             "お仕事_Idol_Available_FLAG_00",
             "お仕事_Idol_Available_FLAG_01"
         ],
-        "_doc": "依次检查每个偶像是否在工作、是否好调。若遇到空闲的好调偶像则直接选择并返回上一级；若未找到则则右划4格并返回；若已经右划到底，则检查最右边的偶像（拉到末端时坐标不同）；若检查完最右边偶像还没找到空闲的好调偶像，则选中默认偶像并返回"
+        "_doc": "依次检查每个偶像是否在工作、是否好调。若遇到空闲的好调偶像则直接选择并返回上一级；若未找到则则右划4格并返回；若已经右划到底，则选中默认偶像并返回"
     },
     "お仕事_Idol_Available_FLAG_00": {
         "recognition": "OCR",
@@ -75,17 +79,9 @@
         "inverse": true,
         "next": [
             "お仕事_Choose_Idol_00",
-            "お仕事_Idol_Available_FLAG_01"
+            "お仕事_Idol_Available_FLAG_01",
+            "お仕事_Idol_Available_FLAG_02"
         ]
-    },
-    "お仕事_Choose_Idol_00": {
-        "recognition": "ColorMatch",
-        "roi": [9, 705, 160, 160],
-        "lower": [14, 180, 254],
-        "upper": [16, 182, 255],
-        "count": 500,
-        "action": "Click",
-        "next": "お仕事_Choose_Idol_Confirm"
     },
     "お仕事_Idol_Available_FLAG_01": {
         "recognition": "OCR",
@@ -94,17 +90,9 @@
         "inverse": true,
         "next": [
             "お仕事_Choose_Idol_01",
-            "お仕事_Idol_Available_FLAG_02"
+            "お仕事_Idol_Available_FLAG_02",
+            "お仕事_Idol_Available_FLAG_03"
         ]
-    },
-    "お仕事_Choose_Idol_01": {
-        "recognition": "ColorMatch",
-        "roi": [161, 705, 160, 160],
-        "lower": [14, 180, 254],
-        "upper": [16, 182, 255],
-        "count": 500,
-        "action": "Click",
-        "next": "お仕事_Choose_Idol_Confirm"
     },
     "お仕事_Idol_Available_FLAG_02": {
         "recognition": "OCR",
@@ -113,17 +101,9 @@
         "inverse": true,
         "next": [
             "お仕事_Choose_Idol_02",
-            "お仕事_Idol_Available_FLAG_03"
+            "お仕事_Idol_Available_FLAG_03",
+            "お仕事_Idol_Available_FLAG_10"
         ]
-    },
-    "お仕事_Choose_Idol_02": {
-        "recognition": "ColorMatch",
-        "roi": [313, 705, 160, 160],
-        "lower": [14, 180, 254],
-        "upper": [16, 182, 255],
-        "count": 500,
-        "action": "Click",
-        "next": "お仕事_Choose_Idol_Confirm"
     },
     "お仕事_Idol_Available_FLAG_03": {
         "recognition": "OCR",
@@ -132,17 +112,9 @@
         "inverse": true,
         "next": [
             "お仕事_Choose_Idol_03",
-            "お仕事_Idol_Available_FLAG_10"
+            "お仕事_Idol_Available_FLAG_10",
+            "お仕事_Idol_Available_FLAG_11"
         ]
-    },
-    "お仕事_Choose_Idol_03": {
-        "recognition": "ColorMatch",
-        "roi": [465, 705, 160, 160],
-        "lower": [14, 180, 254],
-        "upper": [16, 182, 255],
-        "count": 500,
-        "action": "Click",
-        "next": "お仕事_Choose_Idol_Confirm"
     },
     "お仕事_Idol_Available_FLAG_10": {
         "recognition": "OCR",
@@ -151,17 +123,9 @@
         "inverse": true,
         "next": [
             "お仕事_Choose_Idol_10",
-            "お仕事_Idol_Available_FLAG_11"
+            "お仕事_Idol_Available_FLAG_11",
+            "お仕事_Idol_Available_FLAG_12"
         ]
-    },
-    "お仕事_Choose_Idol_10": {
-        "recognition": "ColorMatch",
-        "roi": [9, 857, 160, 160],
-        "lower": [14, 180, 254],
-        "upper": [16, 182, 255],
-        "count": 500,
-        "action": "Click",
-        "next": "お仕事_Choose_Idol_Confirm"
     },
     "お仕事_Idol_Available_FLAG_11": {
         "recognition": "OCR",
@@ -170,17 +134,9 @@
         "inverse": true,
         "next": [
             "お仕事_Choose_Idol_11",
-            "お仕事_Idol_Available_FLAG_12"
+            "お仕事_Idol_Available_FLAG_12",
+            "お仕事_Idol_Available_FLAG_13"
         ]
-    },
-    "お仕事_Choose_Idol_11": {
-        "recognition": "ColorMatch",
-        "roi": [161, 857, 160, 160],
-        "lower": [14, 180, 254],
-        "upper": [16, 182, 255],
-        "count": 500,
-        "action": "Click",
-        "next": "お仕事_Choose_Idol_Confirm"
     },
     "お仕事_Idol_Available_FLAG_12": {
         "recognition": "OCR",
@@ -192,6 +148,90 @@
             "お仕事_Idol_Available_FLAG_13"
         ]
     },
+    "お仕事_Idol_Available_FLAG_13": {
+        "recognition": "OCR",
+        "roi": [465, 857, 160, 160],
+        "expected": "お仕事中",
+        "inverse": true,
+        "next": [
+            "お仕事_Choose_Idol_13",
+            "お仕事_Swipe"
+        ]
+    },
+    "お仕事_Idol_Available_FLAG_0N": {
+        "recognition": "OCR",
+        "roi": [550, 705, 160, 160],
+        "expected": "お仕事中",
+        "inverse": true,
+        "next": [
+            "お仕事_Choose_Idol_0N",
+            "お仕事_Idol_Available_FLAG_1N"
+        ]
+    },
+    "お仕事_Idol_Available_FLAG_1N": {
+        "recognition": "OCR",
+        "roi": [550, 857, 160, 160],
+        "expected": "お仕事中",
+        "inverse": true,
+        "next": [
+            "お仕事_Choose_Idol_1N",
+            "お仕事_Choose_Idol_Confirm"
+        ]
+    },
+    "お仕事_Choose_Idol_00": {
+        "recognition": "ColorMatch",
+        "roi": [9, 705, 160, 160],
+        "lower": [14, 180, 254],
+        "upper": [16, 182, 255],
+        "count": 500,
+        "action": "Click",
+        "next": "お仕事_Choose_Idol_Confirm"
+    },
+    "お仕事_Choose_Idol_01": {
+        "recognition": "ColorMatch",
+        "roi": [161, 705, 160, 160],
+        "lower": [14, 180, 254],
+        "upper": [16, 182, 255],
+        "count": 500,
+        "action": "Click",
+        "next": "お仕事_Choose_Idol_Confirm"
+    },
+    "お仕事_Choose_Idol_02": {
+        "recognition": "ColorMatch",
+        "roi": [313, 705, 160, 160],
+        "lower": [14, 180, 254],
+        "upper": [16, 182, 255],
+        "count": 500,
+        "action": "Click",
+        "next": "お仕事_Choose_Idol_Confirm"
+    },
+    "お仕事_Choose_Idol_03": {
+        "recognition": "ColorMatch",
+        "roi": [465, 705, 160, 160],
+        "lower": [14, 180, 254],
+        "upper": [16, 182, 255],
+        "count": 500,
+        "action": "Click",
+        "next": "お仕事_Choose_Idol_Confirm"
+    },
+    "お仕事_Choose_Idol_10": {
+        "recognition": "ColorMatch",
+        "roi": [9, 857, 160, 160],
+        "lower": [14, 180, 254],
+        "upper": [16, 182, 255],
+        "count": 500,
+        "action": "Click",
+        "next": "お仕事_Choose_Idol_Confirm"
+    },
+    "お仕事_Choose_Idol_11": {
+        "recognition": "ColorMatch",
+        "roi": [161, 857, 160, 160],
+        "lower": [14, 180, 254],
+        "upper": [16, 182, 255],
+        "count": 500,
+        "action": "Click",
+        "next": "お仕事_Choose_Idol_Confirm"
+    },
     "お仕事_Choose_Idol_12": {
         "recognition": "ColorMatch",
         "roi": [313, 857, 160, 160],
@@ -200,17 +240,6 @@
         "count": 500,
         "action": "Click",
         "next": "お仕事_Choose_Idol_Confirm"
-    },
-    "お仕事_Idol_Available_FLAG_13": {
-        "recognition": "OCR",
-        "roi": [465, 857, 160, 160],
-        "expected": "お仕事中",
-        "inverse": true,
-        "next": [
-            "お仕事_Choose_Idol_13",
-            "お仕事_Swipe_End_FLAG",
-            "お仕事_Swipe"
-        ]
     },
     "お仕事_Choose_Idol_13": {
         "recognition": "ColorMatch",
@@ -221,6 +250,30 @@
         "action": "Click",
         "next": "お仕事_Choose_Idol_Confirm"
     },
+    "お仕事_Choose_Idol_0N": {
+        "recognition": "ColorMatch",
+        "roi": [550, 705, 160, 160],
+        "lower": [14, 180, 254],
+        "upper": [16, 182, 255],
+        "count": 500,
+        "action": "Click",
+        "next": "お仕事_Choose_Idol_Confirm"
+    },
+    "お仕事_Choose_Idol_1N": {
+        "recognition": "ColorMatch",
+        "roi": [550, 857, 160, 160],
+        "lower": [14, 180, 254],
+        "upper": [16, 182, 255],
+        "count": 500,
+        "action": "Click",
+        "next": "お仕事_Choose_Idol_Confirm"
+    },
+    "お仕事_Swipe": {
+        "action": "Swipe",
+        "begin": [708, 800, 1, 1 ],
+        "end": [100, 800, 1, 1 ],
+        "next": "お仕事_Swipe_End_FLAG"
+    },
     "お仕事_Swipe_End_FLAG": {
         "recognition": "ColorMatch",
         "roi": [14, 779, 10, 10],
@@ -230,53 +283,9 @@
         "inverse": true,
         "next": [
             "お仕事_Idol_Available_FLAG_0N",
-            "お仕事_Idol_Available_FLAG_1N",
-            "お仕事_Choose_Idol_Confirm"
-        ],
-        "_doc": "识别第一个头像左边位置是否蓝色背景色。若否，说明已经划到尽头，这个位置被某个头像覆盖"
-    },
-    "お仕事_Swipe": {
-        "action": "Swipe",
-        "begin": [708, 800, 1, 1 ],
-        "end": [100, 800, 1, 1 ]
-    },
-    "お仕事_Idol_Available_FLAG_0N": {
-        "recognition": "OCR",
-        "roi": [465, 857, 160, 160],
-        "expected": "お仕事中",
-        "inverse": true,
-        "next": [
-            "お仕事_Choose_Idol_0N",
             "お仕事_Idol_Available_FLAG_1N"
-        ]
-    },
-    "お仕事_Choose_Idol_0N": {
-        "recognition": "ColorMatch",
-        "roi": [465, 857, 160, 160],
-        "lower": [14, 180, 254],
-        "upper": [16, 182, 255],
-        "count": 500,
-        "action": "Click",
-        "next": "お仕事_Choose_Idol_Confirm"
-    },
-    "お仕事_Idol_Available_FLAG_1N": {
-        "recognition": "OCR",
-        "roi": [465, 857, 160, 160],
-        "expected": "お仕事中",
-        "inverse": true,
-        "next": [
-            "お仕事_Choose_Idol_1N",
-            "お仕事_Choose_Idol_Confirm"
-        ]
-    },
-    "お仕事_Choose_Idol_1N": {
-        "recognition": "ColorMatch",
-        "roi": [465, 857, 160, 160],
-        "lower": [14, 180, 254],
-        "upper": [16, 182, 255],
-        "count": 500,
-        "action": "Click",
-        "next": "お仕事_Choose_Idol_Confirm"
+        ],
+        "_doc": "识别第一个头像左边位置是否蓝色背景色。若否，说明这个位置被某个头像覆盖，已经划到尽头。未划到尽头则返回お仕事_Choose_Idol，从头检查一次；划到尽头之后检查0N和1N（两行最右边的）"
     },
     "お仕事_Choose_Idol_Confirm": {
         "recognition": "OCR",
@@ -323,15 +332,30 @@
         "recognition": "OCR",
         "expected": "サークル",
         "action": "Click",
+        "next": "寄付_Wait_Circle_Menu"
+    },
+    "寄付_Wait_Circle_Menu": {
+        "recognition": "OCR",
+        "expected": [
+            "リクエスト",
+            "受け取り"
+        ],
         "next": [
-            "寄付_Requesting_FLAG",
+            "寄付_Request_Finish_FLAG",
+            "寄付_Request_Routine"
+        ]
+    },
+    "寄付_Request_Routine": {
+        "is_sub": true,
+        "next": [
+            "寄付_Close_Previous_Request",
             "寄付_Publish_Request"
         ]
     },
-    "寄付_Requesting_FLAG": {
+    "寄付_Close_Previous_Request": {
         "recognition": "OCR",
-        "expected": "リクエスト中",
-        "next": "寄付_Open_Request_List"
+        "expected": "閉じる",
+        "action": "Click"
     },
     "寄付_Publish_Request": {
         "recognition": "OCR",
@@ -349,6 +373,16 @@
         "recognition": "OCR",
         "expected": "決定",
         "action": "Click",
+        "next": "寄付_Request_Wait"
+    },
+    "寄付_Request_Wait": {
+        "recognition": "OCR",
+        "expected": "Slow down, bro",
+        "inverse": true
+    },
+    "寄付_Request_Finish_FLAG": {
+        "recognition": "OCR",
+        "expected": "リクエスト中",
         "next": "寄付_Open_Request_List"
     },
     "寄付_Open_Request_List": {
@@ -361,12 +395,12 @@
         "recognition": "OCR",
         "roi": [370, 200, 220, 32],
         "expected": "本日残り",
-        "next": "寄付_Donate_Routine"
+        "next": "寄付_Donate"
     },
-    "寄付_Donate_Routine": {
+    "寄付_Donate": {
         "next": [
             "寄付_Donate_Finish_FLAG",
-            "寄付_Donate",
+            "寄付_Donate_Item",
             "寄付_Scroll_Bottom_FLAG",
             "寄付_Scroll"
         ]
@@ -375,9 +409,10 @@
         "recognition": "OCR",
         "roi": [640, 200, 55, 32],
         "expected": "0",
-        "next": "寄付_Close"
+        "next": "寄付_Close",
+        "_doc": "残り寄付可能回数 = 0"
     },
-    "寄付_Donate": {
+    "寄付_Donate_Item": {
         "is_sub": true,
         "recognition": "OCR",
         "expected": "寄付する",
@@ -392,7 +427,7 @@
     },
     "寄付_Donate_Wait": {
         "recognition": "OCR",
-        "expected": "Slow down, bro :)",
+        "expected": "Slow down, bro",
         "inverse": true
     },
     "寄付_Scroll_Bottom_FLAG": {
