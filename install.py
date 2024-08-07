@@ -4,8 +4,6 @@ import shutil
 import sys
 import json
 
-from configure import configure_ocr_model
-
 
 working_dir = Path(__file__).parent
 install_path = working_dir / Path("install")
@@ -32,8 +30,6 @@ def install_deps():
 
 
 def install_resource():
-
-    configure_ocr_model()
 
     shutil.copytree(
         working_dir / "assets" / "resource",
