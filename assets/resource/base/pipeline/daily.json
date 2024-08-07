@@ -310,7 +310,6 @@
         "action": "Click"
     },
     "お仕事_Done_FLAG": {
-        "is_sub": true,
         "recognition": "OCR",
         "roi": [90, 1000, 540, 80 ],
         "expected": "短縮",
@@ -479,7 +478,8 @@
     "コインガシャ_Close": {
         "recognition": "OCR",
         "expected": "閉じる",
-        "action": "Click"
+        "action": "Click",
+        "next": "交換所_Open_Main_Menu"
     },
     "交換所_Open_Main_Menu": {
         "recognition": "TemplateMatch",
@@ -503,9 +503,9 @@
         "recognition": "OCR",
         "expected": "おすすめ",
         "action": "Click",
-        "next": "交換所_Confirm_Exchange"
+        "next": "交換所_Confirm_Purchase"
     },
-    "交換所_Confirm_Exchange": {
+    "交換所_Confirm_Purchase": {
         "recognition": "OCR",
         "expected": "決定",
         "action": "Click"

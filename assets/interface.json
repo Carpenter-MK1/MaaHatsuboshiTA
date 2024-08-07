@@ -30,6 +30,10 @@
             "option": [
                 "打几号位 | Which Target"
             ]
+        },
+        {
+            "name": "自动日常",
+            "entry": "Daily_Begin"
         }
     ],
     "recognizer": {},
