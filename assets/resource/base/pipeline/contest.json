@@ -43,12 +43,6 @@
     "Start_Contest_Battle": {
         "recognition": "TemplateMatch",
         "template": "button_contest_battle_start.png",
-        "roi": [
-            231,
-            1029,
-            271,
-            144
-        ],
         "action": "Click",
         "next": [
             "Start_Contest_Battle",

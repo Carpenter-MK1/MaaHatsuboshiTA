@@ -1,46 +1,4 @@
 {
-    "Main_To_Produce": {
-        "recognition": "TemplateMatch",
-        "template": "button_produce.png",
-        "action": "Click",
-        "next": [
-            "Loop_Produce_To_Choose_Idol"
-        ]
-    },
-    "Loop_Produce_To_Choose_Idol": {
-        "next": [
-            "Flag_In_Choose_Idol",
-            "Choose_Difficulty",
-            "Confirm_Use_AP_Drink"
-        ]
-    },
-    "Choose_Difficulty": {
-        "is_sub": true,
-        "recognition": "TemplateMatch",
-        "template": "button_difficulty_pro.png",
-        "action": "Click"
-    },
-    "Confirm_Use_AP_Drink": {
-        "is_sub": true,
-        "recognition": "TemplateMatch",
-        "template": [
-            "button_use_AP_drink_1.png",
-            "button_use_AP_drink_2.png"
-        ],
-        "roi": [
-            0,
-            798,
-            720,
-            482
-        ],
-        "action": "Click"
-    },
-    "Flag_In_Choose_Idol": {
-        "is_sub": true,
-        "recognition": "TemplateMatch",
-        "template": "flag_in_choose_idol.png",
-        "action": "Click"
-    },
     "test_card_detect": {
         "is_sub": true,
         "recognition": "ColorMatch",
@@ -103,14 +61,25 @@
             "Choose_Starting_Gift"
         ]
     },
+    "Flag_In_Choose_Starting_Gift": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "produce\\flag_in_week_0.png",
+        "action": "DoNothing",
+        "post_delay": 1000,
+        "next": [
+            "Choose_Starting_Gift"
+        ]
+    },
     "Choose_Starting_Gift": {
         "target": [
-            84,
-            771,
-            550,
-            62
+            91,
+            780,
+            329,
+            38
         ],
         "action": "Click",
+        "post_delay": 1000,
         "next": [
             "Choose_Item"
         ]
@@ -153,7 +122,7 @@
     },
     "Choose_Item_SR": {
         "recognition": "TemplateMatch",
-        "template": "produce\\item_bar_SR.png",
+        "template": "produce\\item_bar_R.png",
         "action": "Click",
         "next": [
             "Confirm_Get_Item"
@@ -161,7 +130,7 @@
     },
     "Choose_Item_R": {
         "recognition": "TemplateMatch",
-        "template": "produce\\item_bar_SSR.png",
+        "template": "produce\\item_bar_R.png",
         "action": "Click",
         "next": [
             "Confirm_Get_Item"
@@ -183,7 +152,7 @@
     },
     "Flag_In_Week_1": {
         "recognition": "TemplateMatch",
-        "template": "produce\\flag_in_week_1.png",
+        "template": "produce\\lesson_da.png",
         "action": "DoNothing",
         "next": [
             "Choose_Lesson_Week_1"
@@ -222,6 +191,7 @@
     },
     "Choose_Reward": {
         "is_sub": true,
+        "recognition": "TemplateMatch",
         "template": "produce\\flag_in_choose_reward.png",
         "action": "DoNothing",
         "next": [
@@ -232,7 +202,13 @@
     },
     "Choose_Reward_SSR": {
         "recognition": "TemplateMatch",
-        "template": "produce\\reward_bar_R.png",
+        "template": "produce\\reward_bar_SSR.png",
+        "target_offset": [
+            50,
+            20,
+            0,
+            0
+        ],
         "action": "Click",
         "roi": [
             57,
@@ -260,7 +236,7 @@
     },
     "Choose_Reward_R": {
         "recognition": "TemplateMatch",
-        "template": "produce\\reward_bar_SSR.png",
+        "template": "produce\\reward_bar_R.png",
         "action": "Click",
         "roi": [
             57,
@@ -306,11 +282,16 @@
         "target": "Choose_Lesson_Week_2",
         "post_delay": 500,
         "next": [
-            "Lesson_week_2"
+            "Lesson_week_2",
+            "Close_Others"
         ]
     },
     "Lesson_week_2": {
-        "template": "produce\\study_da.png",
+        "recognition": "TemplateMatch",
+        "template": [
+            "produce\\study_da.png",
+            "produce\\study_vi.png"
+        ],
         "action": "Click",
         "next": [
             "Lesson_week_2_doubleclick"
@@ -327,6 +308,7 @@
     "Loop_Start_Week_3": {
         "next": [
             "Flag_In_Week_3",
+            "Choose_Reward",
             "Close_Others"
         ]
     },
@@ -365,7 +347,8 @@
         "template": "produce\\flag_in_week_4.png",
         "action": "DoNothing",
         "next": [
-            "Choose_Lesson_Week_4"
+            "Choose_Lesson_Week_4",
+            "Close_Others"
         ]
     },
     "Choose_Lesson_Week_4": {
@@ -381,7 +364,8 @@
         "target": "Choose_Lesson_Week_4",
         "post_delay": 500,
         "next": [
-            "Loop_Lesson_week_4"
+            "Loop_Lesson_week_4",
+            "Close_Others"
         ]
     },
     "Loop_Lesson_week_4": {
@@ -402,10 +386,428 @@
     },
     "Choose_Lesson_Week_5": {
         "recognition": "TemplateMatch",
+        "template": "produce\\rest_this_week.png",
+        "action": "Click",
+        "next": [
+            "Week_5_Rest_Confirm"
+        ]
+    },
+    "Week_5_Rest_Confirm": {
+        "recognition": "TemplateMatch",
+        "template": "produce\\confirm.png",
+        "action": "Click",
+        "next": [
+            "Loop_Start_Week_6"
+        ]
+    },
+    "Loop_Start_Week_6": {
+        "next": [
+            "Flag_In_Week_6",
+            "Close_Others"
+        ]
+    },
+    "Loop_Lesson_week_5": {
+        "next": [
+            "Flag_In_Week_6",
+            "Flag_In_Date",
+            "Close_Others"
+        ]
+    },
+    "Flag_In_Date": {
+        "recognition": "TemplateMatch",
+        "template": "produce\\flag_in_date.png",
+        "action": "Click",
+        "target": true
+    },
+    "Flag_In_Week_6": {
+        "recognition": "TemplateMatch",
+        "template": "produce\\flag_in_week_6.png",
+        "action": "DoNothing",
+        "next": [
+            "Choose_Lesson_Week_6"
+        ]
+    },
+    "Choose_Lesson_Week_6": {
+        "recognition": "TemplateMatch",
+        "template": "produce\\study_da.png",
+        "action": "Click",
+        "next": [
+            "Choose_Lesson_Week_6_Clickagain"
+        ]
+    },
+    "Choose_Lesson_Week_6_Clickagain": {
+        "action": "Click",
+        "target": "Choose_Lesson_Week_6",
+        "next": [
+            "Loop_Lesson_week_6",
+            "Close_Others"
+        ]
+    },
+    "Loop_Lesson_week_6": {
+        "next": [
+            "Flag_In_Mid_Finish",
+            "Choose_Reward",
+            "test_card_detect",
+            "Close_Others"
+        ]
+    },
+    "Flag_In_Mid_Finish": {
+        "recognition": "TemplateMatch",
+        "template": "produce\\confirm.png",
+        "action": "Click",
+        "next": [
+            "Loop_Start_Week_7"
+        ]
+    },
+    "Loop_Start_Week_7": {
+        "next": [
+            "Flag_In_Week_7",
+            "Choose_Mid_Reward",
+            "Close_Others"
+        ]
+    },
+    "Choose_Mid_Reward": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "produce\\mid_reward.png",
+        "next": [
+            "Choose_Reward_SSR",
+            "Choose_Reward_SR",
+            "Choose_Reward_R"
+        ]
+    },
+    "Flag_In_Week_7": {
+        "recognition": "TemplateMatch",
+        "template": "produce\\flag_in_week_7.png",
+        "action": "DoNothing",
+        "next": [
+            "Choose_Rest_Week_7"
+        ]
+    },
+    "Choose_Rest_Week_7": {
+        "recognition": "TemplateMatch",
+        "template": "produce\\rest_this_week.png",
+        "action": "Click",
+        "next": [
+            "Week_7_Rest_Confirm"
+        ]
+    },
+    "Week_7_Rest_Confirm": {
+        "recognition": "TemplateMatch",
+        "template": "produce\\confirm.png",
+        "action": "Click",
+        "next": [
+            "Loop_Start_Week_8"
+        ]
+    },
+    "Loop_Start_Week_8": {
+        "next": [
+            "Flag_In_Week_8",
+            "Close_Others"
+        ]
+    },
+    "Flag_In_Week_8": {
+        "recognition": "TemplateMatch",
+        "template": "produce\\flag_in_week_8.png",
+        "action": "DoNothing",
+        "next": [
+            "Choose_Lesson_Week_8"
+        ]
+    },
+    "Choose_Lesson_Week_8": {
+        "recognition": "TemplateMatch",
         "template": "produce\\lesson_study.png",
         "action": "Click",
         "next": [
-            "Choose_Lesson_Week_5_Clickagain"
+            "Choose_Lesson_Week_8_Clickagain"
         ]
     },
+    "Choose_Lesson_Week_8_Clickagain": {
+        "action": "Click",
+        "target": "Choose_Lesson_Week_8",
+        "post_delay": 500,
+        "next": [
+            "Lesson_week_8",
+            "Close_Others"
+        ]
+    },
+    "Lesson_week_8": {
+        "next": [
+            "Confirm_Lesson_Week_8",
+            "Close_Others"
+        ]
+    },
+    "Confirm_Lesson_Week_8": {
+        "recognition": "TemplateMatch",
+        "template": "produce\\study_vi.png",
+        "action": "Click",
+        "next": [
+            "Confirm_Lesson_Week_8_DoubleClick"
+        ]
+    },
+    "Confirm_Lesson_Week_8_DoubleClick": {
+        "action": "Click",
+        "target": "Confirm_Lesson_Week_8",
+        "post_delay": 500,
+        "next": [
+            "Loop_Lesson_week_8"
+        ]
+    },
+    "Loop_Lesson_week_8": {
+        "next": [
+            "Flag_In_Week_9",
+            "Choose_Reward",
+            "Close_Others"
+        ]
+    },
+    "Flag_In_Week_9": {
+        "recognition": "TemplateMatch",
+        "template": "produce\\flag_in_week_9.png",
+        "action": "DoNothing",
+        "next": [
+            "Choose_Lesson_Week_9"
+        ]
+    },
+    "Choose_Lesson_Week_9": {
+        "recognition": "TemplateMatch",
+        "template": "produce\\lesson_vi.png",
+        "action": "Click",
+        "next": [
+            "Choose_Lesson_Week_9_Clickagain"
+        ]
+    },
+    "Choose_Lesson_Week_9_Clickagain": {
+        "action": "Click",
+        "target": "Choose_Lesson_Week_9",
+        "post_delay": 500,
+        "next": [
+            "Loop_Lesson_week_9"
+        ]
+    },
+    "Loop_Lesson_week_9": {
+        "next": [
+            "Flag_In_Week_10",
+            "Choose_Reward",
+            "test_card_detect",
+            "Close_Others"
+        ]
+    },
+    "Flag_In_Week_10": {
+        "recognition": "TemplateMatch",
+        "template": "produce\\flag_in_week_10.png",
+        "action": "DoNothing",
+        "next": [
+            "Choose_Lesson_Week_10"
+        ]
+    },
+    "Choose_Lesson_Week_10": {
+        "recognition": "TemplateMatch",
+        "template": "produce\\lesson_study.png",
+        "action": "Click",
+        "next": [
+            "Choose_Lesson_Week_10_Clickagain"
+        ]
+    },
+    "Choose_Lesson_Week_10_Clickagain": {
+        "action": "Click",
+        "target": "Choose_Lesson_Week_10",
+        "post_delay": 500,
+        "next": [
+            "Lesson_week_10"
+        ]
+    },
+    "Lesson_week_10": {
+        "next": [
+            "Confirm_Lesson_Week_10",
+            "Close_Others"
+        ]
+    },
+    "Confirm_Lesson_Week_10": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "produce\\study_da.png",
+            "produce\\study_vi.png"
+        ],
+        "action": "Click",
+        "next": [
+            "Confirm_Lesson_Week_10_DoubleClick"
+        ]
+    },
+    "Confirm_Lesson_Week_10_DoubleClick": {
+        "action": "Click",
+        "target": "Confirm_Lesson_Week_10",
+        "post_delay": 500,
+        "next": [
+            "Loop_Lesson_week_10"
+        ]
+    },
+    "Loop_Lesson_week_10": {
+        "next": [
+            "Flag_In_Week_11",
+            "Choose_Reward",
+            "Close_Others"
+        ]
+    },
+    "Flag_In_Week_11": {
+        "recognition": "TemplateMatch",
+        "template": "produce\\flag_in_week_11.png",
+        "action": "DoNothing",
+        "next": [
+            "Choose_Lesson_Week_11"
+        ]
+    },
+    "Choose_Lesson_Week_11": {
+        "recognition": "TemplateMatch",
+        "template": "produce\\lesson_vi.png",
+        "action": "Click",
+        "next": [
+            "Choose_Lesson_Week_11_Clickagain"
+        ]
+    },
+    "Choose_Lesson_Week_11_Clickagain": {
+        "action": "Click",
+        "target": "Choose_Lesson_Week_11",
+        "post_delay": 500,
+        "next": [
+            "Loop_Lesson_week_11"
+        ]
+    },
+    "Loop_Lesson_week_11": {
+        "next": [
+            "Flag_In_Week_12",
+            "Choose_Reward",
+            "test_card_detect",
+            "Close_Others"
+        ]
+    },
+    "Flag_In_Week_12": {
+        "recognition": "TemplateMatch",
+        "template": "produce\\flag_in_week_12.png",
+        "action": "DoNothing",
+        "next": [
+            "Choose_Lesson_Week_12"
+        ]
+    },
+    "Choose_Lesson_Week_12": {
+        "recognition": "TemplateMatch",
+        "template": "produce\\lesson_vi.png",
+        "action": "Click",
+        "next": [
+            "Choose_Lesson_Week_12_Clickagain"
+        ]
+    },
+    "Choose_Lesson_Week_12_Clickagain": {
+        "action": "Click",
+        "target": "Choose_Lesson_Week_12",
+        "post_delay": 500,
+        "next": [
+            "Loop_Lesson_week_12"
+        ]
+    },
+    "Loop_Lesson_week_12": {
+        "next": [
+            "Flag_In_Week_13",
+            "Choose_Reward",
+            "test_card_detect",
+            "Close_Others"
+        ]
+    },
+    "Flag_In_Week_13": {
+        "recognition": "TemplateMatch",
+        "template": "produce\\flag_in_week_13.png",
+        "action": "DoNothing",
+        "next": [
+            "Choose_Rest_Week_13"
+        ]
+    },
+    "Choose_Rest_Week_13": {
+        "recognition": "TemplateMatch",
+        "template": "produce\\rest_this_week.png",
+        "action": "Click",
+        "next": [
+            "Week_13_Rest_Confirm"
+        ]
+    },
+    "Week_13_Rest_Confirm": {
+        "recognition": "TemplateMatch",
+        "template": "produce\\confirm.png",
+        "action": "Click",
+        "next": [
+            "Loop_Start_Week_14"
+        ]
+    },
+    "Loop_Start_Week_14": {
+        "next": [
+            "Flag_In_Week_14",
+            "Close_Others"
+        ]
+    },
+    "Flag_In_Week_14": {
+        "recognition": "TemplateMatch",
+        "template": "produce\\flag_in_week_14.png",
+        "action": "DoNothing",
+        "next": [
+            "Choose_Lesson_Week_14"
+        ]
+    },
+    "Choose_Lesson_Week_14": {
+        "recognition": "TemplateMatch",
+        "template": "produce\\study_da.png",
+        "action": "Click",
+        "next": [
+            "Choose_Lesson_Week_14_Clickagain"
+        ]
+    },
+    "Choose_Lesson_Week_14_Clickagain": {
+        "action": "Click",
+        "target": "Choose_Lesson_Week_14",
+        "post_delay": 500,
+        "next": [
+            "Loop_Lesson_week_14"
+        ]
+    },
+    "Loop_Lesson_week_14": {
+        "next": [
+            "test_card_detect",
+            "Choose_Reward",
+            "Close_Others"
+        ]
+    },
+    "Skip_Click_Test": {
+        "action": "Click",
+        "target": [
+            1117,
+            15,
+            163,
+            134
+        ],
+        "post_delay": 500
+    },
+    "Save_Photo": {
+        "action": "Click",
+        "recognition": "TemplateMatch",
+        "template": "produce\\button_save_photo.png",
+        "next": [
+            "Save_Photo_Confirm"
+        ]
+    },
+    "Save_Photo_Confirm": {
+        "action": "Click",
+        "recognition": "TemplateMatch",
+        "template": "icon_yes_big.png",
+        "next": [
+            "Generate_Memory"
+        ]
+    },
+    "Generate_Memory": {
+        "action": "Click",
+        "recognition": "OCR",
+        "roi": [
+            310,
+            942,
+            101,
+            67
+        ],
+        "expected": "生成"
+    }
 }
