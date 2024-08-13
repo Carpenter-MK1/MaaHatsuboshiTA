@@ -1,0 +1,8 @@
+{
+    "controller": {
+        "name": "android",
+        "type": "Adb"
+    },
+    "resource": "Official",
+    "task": []
+}
